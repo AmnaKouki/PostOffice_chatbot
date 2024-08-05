@@ -1,0 +1,1094 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - أهلا
+      - مرحبا
+      - عسلامة
+      - سلام
+      - علا السلامة
+      - اهلا بيك
+      - سلااام
+      - مرحبا بك
+      - مرحبا بكم
+      - السلام
+      - السلام عليكم
+      - السلام عليكم ورحمة الله وبركاته
+      - أهلا بيك
+      - أهلا بيكم
+      - أهلا بك
+      - السلام خويا
+      - السلام عليكم خويا
+      - صباح الخير
+      - مساء الخير
+      - مساء النور
+      - صباح النور
+      - صباح الفل
+      - مساء الفل
+
+  - intent: goodbye
+    examples: |
+      - مع السلامة
+      - إلى اللقاء
+      - بالسلامة
+      - في الأمان
+      - في لامان
+      - باي
+      - باي باي
+      - اوكي باي
+      - اوكي باي باي
+      - انستو
+      - تشاو
+
+  - intent: deny
+    examples: |
+      - لا
+      - موش صحيح
+      - ما هوش صحيح
+      - غالط
+      - موش هكاكة
+      - لااا
+      - موش هك
+      - لا أعتقد ذلك
+
+  - intent: affirm
+    examples: |
+      - اي
+      - أي
+      - صحيح
+      - بالضبط
+      - أي هكاكة
+      - صحيح هكاكة
+      - اييه
+      - كلامك صحيح
+      - صحيح هكاكة
+      - أي بالحق
+      - بالضبط هكاكة
+      - صح
+
+  - intent: ask_bot_identity
+    examples: |
+      - انت شكون
+      - انت شنوة
+      - شكون أنت ؟
+      - ياخي انت روبو
+      - ياخي انت روبوت ؟
+      - شكون يحكي معايا ؟
+      - ياخي انت عبد ؟
+      - ياخي انت أنسان ؟
+      - ياخي انت بشر ؟
+      - ياخي انت بشر تحكي معايا ؟
+      - شسمك ؟
+      - شنوة اسمك ؟
+      - شسماك ربي ؟
+
+  - intent: ask_bot_owner
+    examples: |
+      - شكون إلي صنعك 
+      - شكون إلي برمجك
+      - كيفاش تصنعت
+      - ياخي فما شكون صنعك
+
+  - intent: ask_for_phone_num
+    examples: |
+      - كيفاش انجم انكلمكم
+      - شنوة نومرو التاليفون متاعكم
+      - اعطيني نومرو التاليفون متاعكم
+      - كيفاش نتحصل على مصلحة الحرفاء
+      - نحب نحكي مع مصلحة الحرفاء
+      - نحب نتصل بيكم 
+      - نحب نتصل بيكم على الهاتف
+      - نحب نتصل بيكم على الهاتف الثابت
+      - نحب نتصل بيكم على الهاتف المحمول
+      - نحب نتصل بيكم بالتاليفون
+      - نحب نتصل بيكم على التاليفون
+      - تاليفون
+      - أعطيني نومرو التاليفون
+      - نحب على تاليفون البوسطة
+
+  - intent: ask_for_email
+    examples: |
+      - أعطيني المايل تاعكم
+      - نحب على ال مايل متعكم
+      - اعطيني ال email متعكم
+      - هات المايل
+      - اعطيني adresse mail 
+      - أعطيني ال mail تع البوسطة
+      - أعطيني ال mail متعكم
+      - كيفاش نتواصل بيكم على البريد الالكتروني
+      - كيفاش نتواصل بيكم على البريد الالكتروني الخاص بكم
+      - كيفاش نتواصل بيكم على البريد الالكتروني الخاص بالشركة
+      - كيفاش نتواصل بيكم على البريد الالكتروني الخاص بالمؤسسة
+
+  - intent: ask_for_contact
+    examples: |
+      - كيفاش نتواصل معكم
+      - كيفاش نتصل بيكم
+      - كيفاش نتواصل بيكم
+      - كيفاش نتحصل عليكم
+      - نحب نكلمكم
+      - نحب نتحصل عليكم
+
+  - intent: consult_human
+    examples: |
+      - حشتي بإنسان
+      - نحب نحكي مع إنسان حقيقي
+      - نحب نحكي مع عون
+      - حشتي بعون
+      - حاشتي بعون
+      - حاشتي بعون نحكي معاه
+      - حاشتي بإنسان نحكي معاه
+      - hajti b 3abed
+      - agent
+      - nheb nahki maa agent
+      - n7eb na7ki m3a agent
+      - n7eb na7ki m3a 3abed
+
+  - intent: check_my_balance
+    examples: |
+      - قداش عندي فلوس في الكونط
+      - قداه عندي فلوس في الكونط
+      - قداش عندي في الكونط
+      - قداه عندي في الكونط
+      - نحب نعرف قداش عندي فلوس 
+      - نحب نعرف قداش عندي في الكونط
+      - نحب نعرف قداش عندي فلوس في الكونط
+      - قلي قداه عندي في الكونط
+      - قلي قداش عندي في الكونط
+      -  قداه الصولد متاعي
+      -  قداش الصولد متاعي
+      - أعطيني الصولد متاعي
+      - قلي قداش عندي صولد
+      - قداش فما فلوس في الكونط
+      - قداش فما في الكونط
+      - قداه عندي في الصولد
+      - قداش عندي فلوس 
+      - قداه عندي فلوس
+      - نحب نشوف فلوسي 
+      - نحب نشوف الصولد
+
+  - intent: thanking
+    examples: |
+      - merci 
+      - aychek
+      - 3aychek
+      - 3aychou
+      - aychou bot
+      - merci 3lik
+      - yaatik essa7a
+      - ya3tik essa7a
+      - yaatik saha
+      - ya3tik sa7a
+      - شكرا
+      - مرسي
+      - مشكور
+      - مرسي على المعلومة
+      - عيشك
+      - عيشو
+      - يعطيك الصحة
+      - مرسي عليك
+      - مرسي عليك صديقي
+      - عيشو صديقي
+      - عيشو صاحبي
+      - عيشو بوت
+      - عيشو الروبو
+      - مشكور صاحبي
+      - زايد معاك
+
+  - intent: ask_how_are_you
+    examples: |
+      - شنوة حوالك؟
+      - شنوة احوالك ؟
+      - لاباس عليك ؟
+      - سافا 
+      - شنوة جوك ؟
+      - جوك باهي 
+      - صافا 
+      - لاباس
+      - شنوة حالك ؟
+      - كيفنك
+      - اش عامل 
+      - شنوة اخبارك
+      - اشعامل
+
+  - intent: transfer_money
+    examples: |
+      - نحب نحول فلوس
+      - نحب نحول فلوس لشخص
+      - نحب نحول فلوس لصاحبي
+      - نحب نحول فلوس لصديقي
+      - نحب نبعث فلوس
+      - نحب نبعث فلوس لشكون
+      - كيفاش نبعث فلوس لشكون
+      - ابعث فلوس
+      - نحب نبعث فلوس
+      - كيفاش نبعث فلوس
+      - انجم نبعث فلوس ؟
+      - ابعث فلوس لشكون
+      - ابعث الفلوس لحد
+      - نحب نبعث فلوس لحد
+      - nheb nab3eth flous
+      - n7eb nabeath flous 
+      - n7eb na3ml transaction
+      - ab3eth flous
+      - ab3eth money
+      - ennajem nabe3th flous ?
+      - ab3eth flous l chkoun
+
+  - intent: Name
+    examples: |
+      - اسمي [ايمن](first_name)
+      - انا إسمي [مروى](first_name)
+      - انا [محمد](first_name)
+      - [محمد](first_name)
+      - [Dorra](first_name)
+      - [Ines](first_name)
+      - [Abderrahmen](first_name)
+      - esmi [Hedy](first_name)
+      - [Nour](first_name)
+      - [Amine](first_name)
+      - ena : [Amen](first_name)
+      - 2esmi [Ramzi](first_name)
+
+  - intent: last_Name
+    examples: |
+      - اللقب [تونسي](last_name)
+      - لقبي هو [فضلاوي](last_name)
+      - لقبي [فضلاوي](last_name)
+      - [Trabelsi](last_name)
+      - [Channoufi](last_name)
+      - [Ben Arous](last_name)
+      - [Boukeri](last_name)
+      - ela9ab mte3i [Ben ABid](last_name)
+      - [Ben Jmiaa](last_name)
+      - [Kahleoui](last_name)
+      - la9ab [Amamou](last_name)
+      - la9abi [Amamou](last_name)
+      - [Kanzari](last_name)
+      - [Dhieb](last_name) 
+      - [Souei](last_name)
+      - [Khalledi](last_name) 
+      - [Mbarki](last_name)
+
+  - intent: give_cin
+    examples: |
+      - [09947516](cin)
+      - نومرو [11478974](cin)
+      - نومرو بطاقة التعريف هو [11586425](cin)
+      - نومرو بطافة التعريف [02548769](cin)
+      - بطاقة تعريف [11542689](cin)
+      - رقم بطاقة تعريف [11542689](cin)
+      - noumrou [09854239](cin)
+      - bita9et ta3rif [10823131](cin)
+      - bitaket taarif [10822112](cin)
+      - [09954231](cin)
+      - noumrou bita9etta3rif [10815479](cin)
+      - [10832147](cin)
+      - [10225793](cin)
+      - [10432679](cin)
+      - cin [07815469](cin)
+
+  - intent: email
+    examples: |
+      - [dorratrabelsi8@gmail.com](mail)
+      - المايل متاعي [sonia2011@gmail.com](mail)
+      - المايل هو [houda83@gmail.com](mail)
+      - email mte3i [medezzine@gmail.com](mail)
+      - email  te3i [nouri@yahoo.fr](mail)
+      - [naaimzarrouki@hotmail.com](mail)
+      - [mrbedis@outlook.com](mail)
+      - email howa [razimemi8@gmail.com](mail)
+      - [helmiabsi3@yahoo.com](mail)
+      - [medhedi.ezzine@esprit.tn](mail)
+      - [mohamedaziz.selmi@esprit.tn](mail)
+      - [heniamamou789@gmail.com](mail)
+      - [atayari494@yahoo.com](mail)
+
+  - intent: birthdate
+    examples: |
+      - [1973-05-10](birth_date)
+      - مولود في [1983-05-10](birth_date)
+      - تولدت في [1973-05-10](birth_date)
+      - عيد ميلادي هو [2001-05-10](birth_date)
+      - عيد ميلادي في [2000-05-10](birth_date)
+      - تولدت نهار [2004-11-10](birth_date)
+      - تاريخ الميلاد [1982-04-23](birth_date)
+      - تاريخ الميلاد هو [1996-12-10](birth_date)
+      - mawloud fi [1997-08-22](birth_date)
+      - date de naissance [1989-06-14](birth_date)
+      - [1997-6-13](birth_date)
+      - [1977-6-03](birth_date)
+      - [1952-11-25](birth_date)
+
+  - intent: phone_number
+    examples: |
+      - [54312678](phone_number)
+      - نومرو تاليفوني [20014895](phone_number)
+      - تاليفوني [27845692](phone_number)
+      - رقمي هو [40256789](phone_number)
+      - هاو نومرويا [97643125](phone_number)
+      - هاو نومرو تاليفوني [92458756](phone_number)
+      - نومرويا [54312678](phone_number)
+      - noumrouya [27816709](phone_number)
+      - talifouni [98331662](phone_number)
+      - [20052651](phone_number)
+      - [93124759](phone_number)
+      - mnoumrou taliphouni [42137894](phone_number)
+      - noumrou [94602316](phone_number)
+      - [95889949](phone_number)
+
+  - intent: give_package_id
+    examples: |
+      - [EE123456789TN](package_id)
+      - نومرو الطرد متاعي هو [RR142536123TN](package_id)
+      - الطرد متاعي هو [EE998855661TN](package_id)
+      - النومرو متاعو [RR445511227TN](package_id)
+      - نحب نشوف الطرد متاعي [RR87945612TN](package_id)
+      - نحب نشوف الطرد متاعي وينو [RR229864357TN](package_id)
+      - نحب نشوف الطرد متاعي وصل ولا لا [RR124563987TN](package_id)
+      - نحب نعرف الطرد متاعي وين [GK584769321TN](package_id)
+      - نومرو الطرد هو [RR445511227TN](package_id)
+      - الرقم هو [EE123456789TN](package_id)
+      - رقمو [RR124563987TN](package_id)
+      - رقم الطرد هو [RR142536123TN](package_id)
+      - نومروه هو [RR229864357TN](package_id)
+      - نومرو البريد السريع [RR229864357TN](package_id)
+
+  - intent: ask_for_post_location
+    examples: |
+      - نحب نعرف وينو مكتب البريد
+      - نحب نعرف وين مكتب البريد 
+      - نحب نعرف وينو مكتب البريد  في تونس
+
+  - intent: ask_for_rapid_poste_service
+    examples: |
+      - البريد السريع
+      - خدمة البريد السريع
+      - rapid poste
+      - خدمة البريد السريع في تونس
+      - خدمة البريد السريع في العاصمة
+      - خدمة البريد السريع في العاصمة تونس
+
+  - intent: ask_for_package_tracking
+    examples: |
+      - نحب نشوف الكولي متاعي وين وصل 
+      - وين وصل الكولي متاعي
+      - نحب نعرف وين وصل الكولي كتاعي
+      - نحب نعرف الكولي متاعي وين
+      - نجمشي نعرف الكولي متاعي وين وصل
+      - عندي كولي نحب نعرف وين وصل
+      - عندي طرد نحب نعرف وين وصل
+      - تنجم تقلي وبن وصل الطرد متاعي
+      - تنجم تقلي وين وصل الكولي متاعي
+      - نحب نشوف الطرد متاعي وينو
+      - عندي طرد نحب نشوف وينو
+      - عندي طرد نحب نعرف وينو
+      - نحب نعرف الطرد متاعي وينو
+      - نحب نعرف الطرد متاعي وينو توة
+      - نحب نشوف الطرد متاعي
+      - نحب نشوف الكولي متاعي
+
+  - intent: ask_for_tracking_history
+    examples: |
+      - historique
+      - tracking
+      - track
+
+  - synonym: package
+    examples: |
+      - package
+      - packages
+      - colis
+      - طرد
+      - كولي
+      - كوليات
+      - طرود
+      - طرودات
+      - طردات
+
+  - synonym: number
+    examples: |
+      - numero
+      - noumrou
+      - نومرو
+      - رقم
+      - number
+
+  - lookup: mail
+    examples: |
+      - amine2@gmail.com
+      - mldfks@hotmail.com
+      - amleka.sdm@yahoo.fr
+      - mlkdf22@outlook.fr
+      - fghfghf44@hotmail.fr
+      - mlkklm_5@esprit.tn
+      - bridge22@gmail.com
+      - hkjghfd@hotmail.com
+      - ghjyui5@yahoo.fr
+      - mohamed888@outlook.fr
+      - med7965@hotmail.fr
+      - daliio007@esprit.tn
+      - dzana@imaginet.fr
+      - hanko@hol.fr
+      - yosr.chebbi@esprit.tn
+      - sarra.benhaddada@esprit.tn
+      - zeineb.haffar@esprit.tn
+      - anis.moalla@esprit.tn	
+      - nourchene.riahi@esprit.tn
+      - hakim.atrous@esprit.tn	
+      - mouheb.benabdallah@esprit.tn
+      - medhedi.ezzine@esprit.tn
+      - abdallah.ouaili@esprit.tn
+      - mohamedamine.saighi@esprit.tn
+      - wassim.mkadmi@esprit.tn
+      - mohamedamine.chelly1@esprit.tn
+      - yasmin.hachicha@esprit.tn
+      - nada.benbrahim@esprit.tn	
+      - feriel.mabrouk@esprit.tn
+      - hanko@gmail.com
+      - dzovinar@francenet.fr
+      - soquet@haddock.inria.fr
+      - epochat@worldnet.fr
+      - sorc@gmail.com
+      - murdoc@gmail.com
+      - joewhite@gmail.com
+      - lms@gmail.com
+      - sorel@gmail.com
+      - mure@gmail.com
+      - murea@grenet.fr
+      - soriano@gmail.com
+      - soriel@gmail.com
+      - muriel@gmail.com
+      - sorrow@gmail.com
+      - hanne@gmail.com
+      - sorry@gmail.com
+      - murlock@gmail.com
+      - hanner@gmail.com
+      - lmw@escp.ccip.fr
+      - sorsha@gmail.com
+      - sortega@gmail.com
+      - hannes@gmail.com
+      - sortiz@gmail.com
+      - sory@gmail.com
+      - hanni@gmail.com
+      - hannibal1@gmail.com
+      - sos@gmail.com
+      - sosa@gmail.com
+      - murph@gmail.com
+      - ln@gmail.com
+      - lna@hol.fr
+      - lna@gmail.com
+      - joeyh@gmail.com
+      - hanny@gmail.com
+      - hanoi@gmail.com
+      - hanon@gmail.com
+      - naco@gmail.com
+      - soso@gmail.com
+      - lnaud@teleriviera.fr
+      - lnb@gmail.com
+      - hans.erhart@gmail.com
+      - nad_thi@magic.fr
+      - lnc@gmail.com
+      - nada@hol.fr
+      - nada@physique.ens.fr
+      - lncsa@francenet.fr
+      - sota@gmail.com
+      - hans3@gmail.com
+      - nadal@physique.ens.fr
+      - sotec@gmail.com
+      - nadal@gmail.com
+      - nadam@irisa.fr
+      - soter@gmail.com
+      - nadam@gmail.com
+      - hans@cnam.fr
+      - soteria@gmail.com
+      - nadan@gmail.com
+      - sotero@gmail.com
+      - soth@gmail.com
+      - joeys@gmail.com
+      - hans@libertysurf.fr
+      - sothis@gmail.com
+      - nadas@gmail.com
+      - hans@gmail.com
+      - nadav@gmail.com
+      - nadben@club-internet.fr
+      - lnegrier@grolier.fr
+      - nade@gmail.com
+      - nadeau@gmail.com
+      - sottil@gmail.com
+      - lnet@gmail.com
+      - sottile@gmail.com
+      - sotto@gmail.com
+      - nadege@unimedia.fr
+      - sou2@gmail.com
+      - sou@gmail.com
+      - jof@gmail.com
+      - soubrane@gmail.com
+      - jofe@gmail.com
+      - soudan@gmail.com
+      - nader@hol.fr
+      - nader@gmail.com
+      - nader_m@esme.fr
+      - soufflet@gmail.com
+      - joff@gmail.com
+      - joffre@poly.polytechnique.fr
+      - joffrin@liberation.fr
+      - lng@gmail.com
+      - e950007@escp.ccip.fr
+      - e960063@escp.ccip.fr
+      - soul@gmail.com
+      - hansen@hol.fr
+      - hansen@smtp1.insead.fr
+      - nadia@enya.cad.cea.fr
+      - hansen@gmail.com
+      - joga@gmail.com
+      - lnguyen@ens-lyon.fr
+      - souledge@gmail.com
+      - lnh@gmail.com
+      - soulfinger@gmail.com
+      - lni@gmail.com
+      - joghems@srmp14.saclay.cea.fr
+      - soulie@gmail.com
+      - lnicolas@pasteur.fr
+      - lnicol@irisa.fr
+      - nadine.adam@industrie.gouv.fr
+      - nadine.lemaire@hol.fr
+      - nadine.rouillon@icare.fr
+      - e_voirin@micronet.fr
+      - nadine@hol.fr
+      - nadine@gmail.com
+      - lnl@hol.fr
+      - eaa.bmsi@gmail.com
+      - jogy@gmail.com
+      - cly@imaginet.fr
+      - srousseau@gmail.com
+      - joh@gmail.com
+      - eab@metra.fr
+      - lnm@gmail.com
+      - joha@gmail.com
+      - nadineg@gmail.com
+      - sroy@gmail.com
+      - johan.andersson@gmail.com
+      - srp@gmail.com
+      - hanso@gmail.com
+      - johan.nilsson@gmail.com
+      - johan.montagnat@sophia.inria.fr
+      - hansolo@gmail.com
+      - nadir@gmail.com
+      - eacparis@pratique.fr
+      - eadam@infini.fr
+      - lnoyelle@ifhamy.insa-lyon.fr
+      - johan@hol.fr
+      - nadja@gmail.com
+      - lnp@gmail.com
+      - johan@gmail.com
+      - nadler@insead.fr
+      - srs@gmail.com
+      - nado@gmail.com
+      - lns@gmail.com
+      - nadon@gmail.com
+      - johanj@worldnet.fr
+      - srsr@gmail.com
+      - johann.boulet@gmail.com
+      - johann.cottaign@hol.fr
+      - nadya@gmail.com
+      - srt@gmail.com
+      - nae@gmail.com
+      - lnx@gmail.com
+      - hanss@gmail.com
+      - srudy@gmail.com
+      - nael@gmail.com
+      - sruiz@gmail.com
+      - lo@santorin.int-evry.fr
+      - lo@gmail.com
+      - naepel@micronet.fr
+      - naepels@micronet.fr
+      - hanuman@gmail.com
+      - loa@gmail.com
+      - naf@gmail.com
+      - naf@imaginet.fr
+      - load@gmail.com
+      - hanz@gmail.com
+      - srv@hol.fr
+      - nafia@carolus.cma.fr
+      - hanzel@gmail.com
+      - srv@gmail.com
+      - johanne@gmail.com
+      - johannes.bluemink@hol.fr
+      - johannes.profijt@gmail.com
+      - loaf@gmail.com
+      - loafer@gmail.com
+      - johannes@techlink.fr
+      - johannes@gmail.com
+      - nafta@gmail.com
+      - haos@gmail.com
+      - loan@gmail.com
+      - srx@gmail.com
+      - sry@gmail.com
+      - srz@gmail.com
+      - johansson@gmail.com
+      - hapi@gmail.com
+      - hapiness@gmail.com
+      - nagash@gmail.com
+      - johb@gmail.com
+      - loba@gmail.com
+      - haplo@hol.fr
+      - haplo@gmail.com
+      - ss6250@gmail.com
+      - eai@nordnet.fr
+      - johel@gmail.com
+      - nagel@gmail.com
+      - lobel@gmail.com
+      - ss@gmail.com
+      - nagi@gmail.com
+      - lobjois@cert.fr
+      - ssa@gmail.com
+      - happiness@gmail.com
+      - john-k@gmail.com
+      - lobo2@gmail.com
+      - nagle@gmail.com
+      - nagler@gmail.com
+      - nago@hol.fr
+      - john.adams@gmail.com
+      - nago@gmail.com
+      - john.allen@gmail.com
+      - ssahin@gmail.com
+      - ssaid@gmail.com
+      - nagpal@magic.fr
+      - john.b@gmail.com
+      - john.bailey@gmail.com
+      - john.baldwin@gmail.com
+      - nagra@gmail.com
+      - john.bingham@art.alcatel.fr
+      - eam@quaternet.fr
+      - happy2@gmail.com
+      - lovergin@ens.lifl.fr
+      - nagu@gmail.com
+      - eamblard@pratique.fr
+      - nagumo@gmail.com
+      - john.cagnol@sophia.inria.fr
+      - loverl@netinfo.fr
+      - nagy@gmail.com
+      - john.carter@gmail.com
+      - john.collins@gmail.com
+      - nah@gmail.com
+      - nahanni@world-net.sct.fr
+      - nahanni@worldnet.sct.fr
+      - john.d@gmail.com
+      - ssanchez@gmail.com
+      - ssanchez@hol.fr
+      - happy@gmail.com
+      - john.davis@gmail.com
+      - eandrieux@inext.fr
+      - ssandra@gmail.com
+      - nahitfol@bocal.cs.univ-paris8.fr
+      - eantoni@messel.emse.fr
+      - nahoko@gmail.com
+      - nahond@ccr.jussieu.fr
+      - ssarah@gmail.com
+      - john.green@gmail.com
+      - john.griffin@gmail.com
+      - john.harding@gmail.com
+      - eapm@andcp.fr
+      - ssassi@gmail.com
+      - john.henderson@gmail.com
+      - john.hill@gmail.com
+      - nai@gmail.com
+      - naia@gmail.com
+      - happydh@asi.fr
+      - ssavage@gmail.com
+      - naidoo@gmail.com
+      - john.k@gmail.com
+      - ssb@gmail.com
+      - naik@gmail.com
+      - earl1623@eurobretagne.fr
+      - john.lark@club-internet.fr
+      - nail@gmail.com
+      - john.lee@gmail.com
+      - john.lewis@gmail.com
+      - john.macdonald@gmail.com
+      - john.martin@gmail.com
+      - john.may@gmail.com
+      - ssc@gmail.com
+      - loviatar@gmail.com
+      - john.monahan@gmail.com
+      - earliner@pratique.fr
+      - naim@gmail.com
+      - john.norton@gmail.com
+      - earlotti@ris.fr
+      - naina@gmail.com
+      - john.phillips@gmail.com
+      - lovisa@etca.fr
+      - sschmitt@gmail.com
+      - clyonai@world-net.sct.fr
+      - sschneider@gmail.com
+      - clyonai@worldnet.sct.fr
+      - nairi@gmail.com
+      - nais@gmail.com
+      - sschram@gmail.com
+      - lovmoney@club-internet.fr
+      - regan@gmail.com
+      - haps@gmail.com
+      - john.stephens@gmail.com
+      - reganm.regan@ibmx400-us.ibmmail.circe.fr
+      - hapy@gmail.com
+      - earsel@meteo.fr
+      - sschwartz@gmail.com
+      - naj@gmail.com
+      - regard@gmail.com
+      - regards@gmail.com
+      - ssci@gmail.com
+      - john.thompson@gmail.com
+      - regatta@gmail.com
+      - john.townsend@gmail.com
+      - john.unger@gmail.com
+      - sscm@gmail.com
+      - john.van_den_elst@sophia.inria.fr
+      - lovy@gmail.com
+      - regchar@gmail.com
+      - john.wells@gmail.com
+      - john.williams@hol.fr
+      - john.williams@gmail.com
+      - john.wilson@gmail.com
+      - najer@imag.imag.fr
+      - najera@imag.imag.fr
+      - low@gmail.com
+      - naji@gmail.com
+      - har@gmail.com
+      - najid@club-internet.fr
+      - regent@club-internet.fr
+      - hara@gmail.com
+      - regent@gmail.com
+      - reger@gmail.com
+      - najman@thomson-lcr.fr
+      - regg@gmail.com
+      - medezzine777@gmail.com
+      - amir.tayari@gmail.com
+      - amen.mrayah@esprit.tn
+      - mariemouinissi4@gmail.com
+
+  - lookup: phone_number
+    examples: |
+      - 29457368
+      - 20198533
+      - 21679151
+      - 20371570
+      - 21228196
+      - 27347982
+      - 29815317
+      - 25328570
+      - 26384530
+      - 20782557
+      - 24422553
+      - 26441551
+      - 21046004
+      - 23761018
+      - 26371145
+      - 21413494
+      - 24577069
+      - 22808829
+      - 24567120
+      - 23865086
+      - 27552111
+      - 28904010
+      - 28569129
+      - 23682880
+      - 24370722
+      - 20698044
+      - 21147190
+      - 29167540
+      - 26479142
+      - 23780537
+      - 24344967
+      - 29354951
+      - 28894522
+      - 26356410
+      - 27901217
+      - 24323227
+      - 20900557
+      - 28658284
+      - 29760645
+      - 29004873
+      - 24119641
+      - 29388503
+      - 20925820
+      - 24587425
+      - 24384445
+      - 28071313
+      - 29276718
+      - 27583734
+      - 26116649
+      - 20443458
+      - 24109892
+      - 28277060
+      - 50246539
+      - 54664922
+      - 53462661
+      - 51458822
+      - 52826842
+      - 51948212
+      - 56882451
+      - 59055379
+      - 57061991
+      - 53459666
+      - 57556430
+      - 51089492
+      - 50317250
+      - 50888274
+      - 58331800
+      - 52452127
+      - 51399786
+      - 52619305
+      - 52871660
+      - 55176235
+      - 55298168
+      - 56913003
+      - 59395548
+      - 58271719
+      - 50815356
+      - 58734332
+      - 51246986
+      - 57782149
+      - 52138428
+      - 56591501
+      - 57026714
+      - 59568017
+      - 58637323
+      - 53421994
+      - 59570250
+      - 58442610
+      - 50921390
+      - 59990730
+      - 58824609
+      - 51213813
+      - 51812783
+      - 59371597
+      - 57629990
+      - 54846326
+      - 59558412
+      - 50878895
+      - 53811954
+      - 59329066
+      - 55879382
+      - 58368816
+      - 57739000
+      - 50675239
+      - 51595082
+      - 55502267
+      - 57965174
+      - 55006489
+      - 54122885
+      - 57385929
+      - 55242178
+      - 53322709
+      - 57127579
+      - 51877106
+      - 90961101
+      - 92348747
+      - 95123578
+      - 97827043
+      - 95754769
+      - 94773825
+      - 91095980
+      - 97390008
+      - 94152340
+      - 94271653
+      - 91446659
+      - 91905331
+      - 91868767
+      - 93279829
+      - 90711141
+      - 92061022
+      - 94601316
+      - 93518191
+      - 91495239
+      - 92027737
+      - 96554301
+      - 91305539
+      - 96700248
+      - 99889294
+      - 99861835
+      - 90551234
+      - 92999034
+      - 97690760
+      - 92447586
+      - 92092862
+      - 90257313
+      - 93577702
+      - 92158889
+      - 97740855
+      - 95816949
+      - 90746507
+      - 96513582
+      - 92318608
+      - 96333949
+      - 92561327
+      - 96544282
+      - 93402023
+      - 91516229
+      - 90575345
+      - 99253228
+      - 94649325
+      - 90303623
+      - 97530679
+      - 97312127
+      - 97126880
+      - 99037219
+      - 94681532
+      - 91158827
+      - 99715290
+      - 97685196
+      - 92277438
+      - 95544475
+      - 98985283
+      - 99116282
+      - 92180256
+      - 97895629
+      - 90424660
+      - 98469986
+      - 93568806
+      - 99428803
+      - 95217690
+      - 99618032
+      - 92173870
+      - 93074149
+      - 97154063
+      - 98237148
+      - 99901201
+      - 95985916
+      - 99559189
+      - 97917281
+      - 94125436
+      - 93510658
+      - 93467687
+      - 97842328
+      - 99557933
+      - 90369684
+      - 94452512
+      - 95886398
+      - 92783926
+      - 96858599
+      - 96842755
+      - 90263011
+      - 92833783
+      - 93574667
+      - 95862455
+      - 92042795
+      - 90620065
+      - 99566128
+      - 91389922
+      - 90763776
+      - 95453560
+      - 94017000
+      - 92039338
+      - 94491206
+      - 97223804
+      - 90926686
+      - 22388459
+      - 22464559
+      - 26469802
+      - 24116758
+      - 20347497
+      - 21148923
+      - 23061559
+      - 22583659
+      - 22509465
+      - 29914598
+      - 24896629
+      - 22111254
+      - 29347113
+      - 23481753
+      - 25878720
+      - 22216449
+      - 26803472
+      - 25233041
+      - 28241683
+      - 26719809
+      - 27633025
+      - 25295791
+      - 26534783
+      - 29340635
+      - 26986192
+      - 24104065
+      - 21240655
+      - 25580881
+      - 27073799
+      - 24503340
+      - 24733236
+      - 20685618
+      - 24007864
+      - 22928864
+      - 24410780
+      - 24146934
+      - 21191703
+      - 26332830
+      - 25936851
+      - 29209034
+      - 28406058
+      - 29481755
+      - 24457937
+      - 24328176
+      - 26822495
+      - 24899753
+      - 23552593
+      - 23635577
+      - 28757076
+      - 28855759
+      - 27319467
+      - 50148177
+      - 54157179
+      - 53517509
+      - 58000953
+      - 54145289
+      - 57532337
+      - 51323574
+      - 51440520
+      - 56517017
+      - 58685500
+      - 53027753
+      - 57555712
+      - 57542349
+      - 54146084
+      - 57982248
+      - 50808159
+      - 57768069
+      - 59975857
+      - 57519579
+      - 57901618
+      - 52936213
+      - 53291918
+      - 52838242
+      - 55523268
+      - 51685825
+      - 55974427
+      - 53824749
+      - 54918747
+      - 55934151
+      - 55843526
+      - 50144623
+      - 55414398
+      - 59344334
+      - 50548231
+      - 54654408
+      - 55009184
+      - 57805245
+      - 58496751
+      - 51212746
+      - 53992296
+      - 50269249
+      - 54753647
+      - 56812702
+      - 53388846
+      - 56040735
+      - 52021670
+      - 50712736
+      - 59056688
+      - 50509293
+      - 50138986
+      - 51943397
+      - 56219419
+      - 52218368
+      - 50702821
+      - 51760551
+      - 52235841

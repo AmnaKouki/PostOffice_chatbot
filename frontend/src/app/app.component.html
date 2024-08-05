@@ -1,0 +1,77 @@
+<nb-layout
+  ><nb-layout-column>
+    <nb-chat [@.disabled]="true">
+      <ng-template nbChatTitle>
+        <div style="text-align: center">🤖 البريد التونسي Chatbot</div>
+      </ng-template>
+      <!-- Loading template -->
+      <div *nbCustomMessage="'loading'">
+        <img
+          src="assets/bubble.gif"
+          style="width: 50px; margin: -15px 0 0 -15px"
+          alt=""
+        />
+      </div>
+
+      <!-- stepper template -->
+      <div *nbCustomMessage="'steps'">
+        <div class="card" style="color: #000000; margin: -15px 0 0 -15px">
+          <p-timeline [value]="items" class="w-full">
+            <ng-template pTemplate="marker" let-event>
+              <span class="custom-marker shadow-2">✔️</span>
+            </ng-template>
+
+            <ng-template pTemplate="content" let-event>
+              <span class="stepper-title"
+                >{{ event.location }} - {{ event.country }}</span
+              >
+              <span class="stepper-date">{{ event.date }}</span>
+              <span class="stepper-content">
+                {{ event.eventType }} {{ event.info }}</span
+              >
+            </ng-template>
+          </p-timeline>
+        </div>
+      </div>
+
+      <!--Buttons template -->
+      <div *nbCustomMessage="'buttons'" style="margin: -15px 0 0 -15px">
+        <button nbButton (click)="forceMessage('خدمات البريد السريع')">
+          خدمات البريد 📮
+        </button>
+        &nbsp;
+        <button nbButton (click)="forceMessage('نحب نبعث فلوس')">
+          نحب نبعث فلوس 💸
+        </button>
+        &nbsp;
+        <button nbButton (click)="forceMessage('نحب نعرف وين الـ Colis متاعي')">
+          تتبع الطرود البريدية 📦
+        </button>
+      </div>
+
+      <nb-chat-message
+        *ngFor="let msg of messages"
+        [type]="msg.type"
+        [message]="msg.text"
+        [reply]="msg.reply"
+        [files]="msg.files"
+        [quote]="msg.quote"
+        [latitude]="msg.latitude"
+        [longitude]="msg.longitude"
+        [avatar]="msg.user.avatar"
+        class="red"
+      >
+      </nb-chat-message>
+
+      <nb-chat-form
+        [ngClass]="{
+        'rtl': isUserMessageArabic === 'rtl',
+        'ltr': isUserMessageArabic === 'ltr',
+        }"
+        (send)="sendMessage($event)"
+        (onInputChange)="handleInputChange($event)"
+        messagePlaceholder="إسئلني ..."
+      >
+      </nb-chat-form>
+    </nb-chat> </nb-layout-column
+></nb-layout>

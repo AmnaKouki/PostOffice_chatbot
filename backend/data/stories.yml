@@ -1,0 +1,104 @@
+version: "3.1"
+
+stories:
+  - story: greeting
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: introduction
+    steps:
+      - or:
+          - intent: ask_bot_identity
+          - intent: ask_bot_owner
+      - action: utter_iamabot
+      - action: utter_ask_for_input
+
+  - story: ask for contacts
+    steps:
+      - or:
+          - intent: ask_for_contact
+          - intent: consult_human
+      - action: utter_ask_for_phone_num
+      - action: utter_phone_num
+      - action: utter_ask_for_email
+      - action: utter_email
+
+  - story: ask for phone number
+    steps:
+      - intent: ask_for_phone_num
+      - action: utter_ask_for_phone_num
+      - action: utter_phone_num
+
+  - story: ask for email
+    steps:
+      - intent: ask_for_email
+      - action: utter_ask_for_email
+      - action: utter_email
+
+  - story: ask for cin number
+    steps:
+      - intent: give_cin
+      - action: utter_ask_for_cin
+      - intent: give_cin
+        entities:
+          - cin: 11234567
+      - action: action_check_cin
+      - action: utter_cin
+
+  - story: ask for package tracking
+    steps:
+      - intent: ask_for_package_tracking
+      - action: utter_check_package_status
+      - action: utter_ask_for_rapid_poste_number
+      - intent: give_package_id
+        entities:
+          - package_id
+      - action: action_ask_tracking_history
+
+
+  # - story: ask for package status
+  #   steps:
+  #     - intent: ask_for_package_tracking
+  #     - action: utter_check_package_status
+  #     # - action: utter_rapid_pote_number
+  #     - action: utter_ask_for_rapid_poste_number
+  #     - intent: give_package_id
+  #       entities:
+  #         - package_id
+  #     - action: action_check_package_status
+
+  ## intro to rapid poste services:
+  # - story: ask about the rapid poste service
+  #   steps:
+  #   - intent: ask_for_rapid_poste_service
+  #   - action: utter_welcome_to_rapid_poste
+  #   - action: utter_ask_for_rapid_poste_service
+
+  # - story: track package location
+  #   steps:
+  #     - intent: ask_for_rapid_poste_service
+  #     - action: utter_welcome_to_rapid_poste
+  #     - action: utter_ask_for_rapid_poste_service
+  #     - intent: ask_for_package_tracking
+  #     - action: utter_check_package_status
+  #     # - action: utter_rapid_pote_number
+  #     - action: utter_ask_for_rapid_poste_number
+  #     - intent: give_package_id
+  #       entities:
+  #         - package_id
+  #     - action: action_check_package_status
+
+  - story: Two-stage fallback
+    steps:
+      - intent: nlu_fallback
+      - action: action_default_fallback
+      # - intent: nlu_fallback
+      # - action: action_utter_ask_rephrase
+
+  # - story: get tracking history with a collapsible
+  #   steps:
+  #     - intent: ask_for_tracking_history
+  #     - action: utter_ask_for_tracking_history
+  #     - action: action_ask_tracking_history
+    

@@ -1,0 +1,132 @@
+version: "3.1"
+
+rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Process CIN
+    steps:
+      - intent: give_cin
+        entities:
+          - cin
+      - action: action_check_cin
+      - action: utter_cin
+
+  - rule: utter_you're_welcome after intent thanks
+    steps:
+      - intent: thanking
+      - action: utter_thanks
+      - action: utter_ask_for_input
+
+  - rule: utter_i_am_fine after intent how are you
+    steps:
+      - intent: ask_how_are_you
+      - action: utter_i_am_fine
+      - action: utter_ask_for_input
+
+  - rule: check package location
+    steps:
+      - intent: give_package_id
+        entities:
+          - package_id
+      - action: action_ask_tracking_history
+
+  # - rule: check package status
+  #   steps:
+  #     - intent: check_package_status
+  #     - action: utter_check_package_status
+
+  # - rule: provide package status
+  #   steps:
+  #     - intent: give_package_id
+  #       entities:
+  #         - package_id
+  #     - action: action_check_package_status
+
+  # - rule: check package location
+  #   steps:
+  #     - intent: ask_for_package_tracking
+  #     - action: utter_check_package_status
+  #     - action: utter_ask_for_rapid_poste_number
+
+  # - rule: package location
+  #   steps:
+  #     - action: utter_ask_for_rapid_poste_number
+  #     - intent: give_package_id
+  #       entities:
+  #         - package_id
+  #     - action: action_check_package_status
+
+  ##---------------------------------------------
+
+  # - rule: check a package status
+  #   steps:
+  #   - intent: check_package_status
+  #   - action: utter_check_package_status
+  #   - intent: give_package_id
+  #     entities:
+  #       - package_id
+  #   - action: action_check_package_status
+
+  ##---------------------------------------------
+  # - rule: check a package status1
+  #   steps:
+  #   - intent: check_package_status
+  #   - action: utter_check_package_status
+
+  # - rule: check a package status2
+  #   steps:
+  #   - action: utter_check_package_status
+  #   - intent: give_package_id
+  #     entities:
+  #       - package_id
+
+  # - rule: check a package status3
+  #   steps:
+  #   - intent: give_package_id
+  #   - action: action_check_package_status
+
+  - rule: Respond to user with default fallback message
+    steps:
+      - intent: nlu_fallback
+      - action: action_default_fallback
+
+  - rule: Respond to intent out_of_scope
+    steps:
+      - intent: out_of_scope
+      - action: utter_default
+# - rule: Activate fallback on two-stage fallback
+#   steps:
+#     - intent: nlu_fallback
+#     - action: action_utter_ask_rephrase
+#     - intent: nlu_fallback
+#     - action: action_default_fallback
+
+#------------------------------------------
+
+# - rule: intent Name after utter_enter_your_name
+#   steps:
+#   - action: utter_enter_your_name
+#   - intent: Name
+
+# - rule: utter_enter_your_last_name after Name
+#   steps:
+#   - intent: Name
+#   - action: utter_enter_your_last_name
+
+# - rule:  intent last_name after utter_enter_your_last_name
+#   steps:
+#   - action: utter_enter_your_last_name
+#   - intent: last_Name
+
+# - rule:  utter_enter_email after last_Name
+#   steps:
+#   - intent: last_Name
+#   - action: utter_enter_email
+
+# - rule: intent email after utter_enter_email
+#   steps:
+#   - action: utter_enter_email
+#   - intent: email

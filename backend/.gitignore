@@ -1,0 +1,5 @@
+.rasa
+__pycache__
+rasaenv
+utils.txt
+models
