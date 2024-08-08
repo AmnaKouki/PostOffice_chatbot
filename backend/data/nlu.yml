@@ -389,11 +389,174 @@ nlu:
       - نحب نشوف الطرد متاعي
       - نحب نشوف الكولي متاعي
 
-  - intent: ask_for_tracking_history
+# TODO: deal with this
+  # - intent: ask_for_tracking_history
+  #   examples: |
+  #     - historique
+  #     - tracking
+  #     - track
+
+
+
+
+  - intent: ask_for_poste_office_work_time
     examples: |
-      - historique
-      - tracking
-      - track
+      - أوقات العمل
+      - ساعات العمل
+      - نحب نعرف أوقات العمل
+      - وقتاش تخدم البوسطة
+      - شنوة أوقات العمل متاع البوسطة
+      - سنوة اوقات العمل متاع البريد 
+      - وقتاش تخدمو 
+      - وقتاش يخدم البريد
+      - ماهي اوقات العمل 
+      - ماهي اوقات العمل بالبريد التونسي
+      - ماهي اوقات العمل بالبريد
+      - وقتاش تحل البوسطة
+      - وقتاش تسكر البوسطة
+      - شنوة اخر وقت تخدم فيه البوسطة
+      - وقتاش تحلو
+      - وقتاش تسكرو
+      - نحب نعرف وقت العمل
+      - نحب نعرف وقت العمل في مكتب البريد
+      - نحب نعرف وقت العمل في مكتب البريد
+      - horaire de travail
+      - temps de travail
+      - wa9tech t7el el bousta
+      - wa9tech t7el el poste
+      - wa9tech te5dem el bousta
+      - wa9tech tekhdem el bousta
+      - waktech tekhdem el poste
+      - waktesh tekhdmou
+      - wa9tech te5dmou
+      - wakteh tekhdmou
+      - waktech te5dmou
+      - fena wa9t te5dmou
+      - fena wakt tekhdmou
+      - m3a waktesh tsaker el poste
+      - m3a wa9tech tsaker el bousta
+      - chnia aw9at el 3amal
+      - chnia aw9at el 3amal mte3 el bousta
+      - awkat el 3amal
+
+
+  - intent: ask_for_poste_office_winter_work_time
+    examples: |
+      - أوقات العمل في الشتاء
+      - ساعات العمل في الشتاء
+      - نحب نعرف أوقات العمل في الشتاء
+      - وقتاش تخدم البوسطة في الشتاء
+      - شنوة أوقات العمل متاع البوسطة في الشتاء
+      - سنوة اوقات العمل متاع البريد في الشتاء
+      - وقتاش تخدمو في الشتاء
+      - وقتاش يخدم البريد في الشتاء
+      - ماهي اوقات العمل في الشتاء
+      - ماهي اوقات العمل بالبريد التونسي في الشتاء
+      - ماهي اوقات العمل بالبريد في الشتاء
+      - وقتاش تحل البوسطة في الشتاء
+      - وقتاش تسكر البوسطة في الشتاء
+      - شنوة اخر وقت تخدم فيه البوسطة في الشتاء
+      - وقتاش تحلو في الشتاء
+      - وقتاش تسكرو في الشتاء
+      - نحب نعرف وقت العمل في الشتاء
+      - نحب نعرف وقت العمل في الشتاء في مكتب البريد
+      - نحب نعرف وقت العمل في الشتاء في مكتب البريد
+      - شنوة اةقات العمل في الشتاء
+      - وقتاش تخدمو في الشتاء
+      - شنوا التوقيت الشتوي 
+      - التوقيت الشتوي
+      - التوقيت الشتوي متاع البوسطة
+      - شنوة وقت الخدمة في الشتاء
+      - horaire d'hiver
+      - horaire de travail en hiver
+      - horaire de travail en hiver de la poste
+      - horaire de travail en hiver de la poste tunisienne
+      - wa9tech te5dem el bousta fe chté
+      - wa9tech te5dem el poste fe chté
+      - wa9tech te5dem el poste tunisien fe chté
+      - wa9teh te5dem el bousta fe chté
+      - waktech te5dem el poste fe chté
+      - waktech tekhdem el bousta fi chté
+      - chnowa wa9t el 5edma fel chta
+      - wa9teh t7el el bousta fel chté
+      - wakteh thel el bousta fel chta
+      - kifech wa9t el 5edma fel chte
+      - kifeh wa9t el khedma fel chte
+
+
+  - intent: ask_for_poste_office_summer_work_time
+    examples: |
+      - أوقات العمل في الصيف
+      - ساعات العمل في الصيف
+      - نحب نعرف أوقات العمل في الصيف
+      - وقتاش تخدم البوسطة في الصيف
+      - شنوة أوقات العمل متاع البوسطة في الصيف
+      - سنوة اوقات العمل متاع البريد في الصيف
+      - وقتاش تخدمو في الصيف
+      - وقتاش يخدم البريد في الصيف
+      - ماهي اوقات العمل في الصيف
+      - ماهي اوقات العمل بالبريد التونسي في الصيف
+      - ماهي اوقات العمل بالبريد في الصيف
+      - وقتاش تحل البوسطة في الصيف
+      - وقتاش تسكر البوسطة في الصيف
+      - شنوة اخر وقت تخدم فيه البوسطة في الصيف
+      - وقتاش تحلو في الصيف
+      - وقتاش تسكرو في الصيف
+      - نحب نعرف وقت العمل في الصيف
+      - نحب نعرف وقت العمل في الصيف في مكتب البريد
+      - نحب نعرف وقت العمل في الصيف في مكتب البريد
+      - شنوة اةقات العمل في الصيف
+      - وقتاش تخدمو في الصيف
+      - شنوا التوقيت الصيفي 
+      - taw9it el sif
+      - horaire de travail en été
+      - horaire d'été
+      - horaire de travail en été de la poste
+      - horaire de travail en été de la poste tunisienne
+      - wa9tech te5dem el bousta fe sif
+      - wa9tech te5dem el poste fe sif
+      - wa9tech te5dem el poste tunisien fe sif
+      - wa9teh te5dem el bousta fe sif
+      - waktech te5dem el poste fe sif
+      - waktech tekhdem el bousta fi sif
+      - chnowa wa9t el 5edma fel sif
+      - wa9teh t7el el bousta fel sif
+      - wakteh thel el bousta fel sif
+      - kifech wa9t el 5edma fel sif
+      - kifeh wa9t el khedma fel sif
+      - chnowa aw9at el 5edma fel sif
+      - wa9tech t7ellou fel sif
+      - chnowa awkat el khedma fel siff
+      - wa9tech t7el el poste fel sif
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# TODO: verify if synonyms works (guess it does not work)
 
   - synonym: package
     examples: |

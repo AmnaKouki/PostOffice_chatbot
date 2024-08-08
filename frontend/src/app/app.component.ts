@@ -7,12 +7,14 @@ import { v4 as uuidv4 } from 'uuid';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-senderId =''
+  senderId = '';
   constructor() {
     this.senderId = uuidv4();
   }
 
   isLoading = false;
+  tableCols : any;
+  timeTable: any[] = [];
   messages: any[] = [
     {
       text: 'أهلا بيك ! أنا صديقك الChatbot 🤖 . إنجم نعاوك في كل شي يخص خدمات البريد التونسي. كان عندك سؤال تفضل 😊',
@@ -98,7 +100,7 @@ senderId =''
       (data: any) => {
         if (data.length === 0) {
           this.messages.push({
-            text: 'سامحني صارت مشكلة... كان تنجم تعاود تسأل مرة أخرى',
+            text: 'سامحني صارت مشكلة ... 😓 كان تنجم تعاود تسأل مرة أخرى',
             date: new Date(),
             reply: false,
             user: {
@@ -166,12 +168,47 @@ senderId =''
               },
             });
           }
+          if (line.custom?.workHoursTable){
+            this.tableCols = [
+              { field: 'day', header: 'اليوم' },
+              { field: 'time', header: 'التوقيت' }
+            ];
+            this.timeTable= line.custom.workingHours;
+
+            this.messages.push({
+              date: new Date(),
+              reply: false,
+              type: 'workHoursTable',
+              user: {
+                name: 'Bot',
+                avatar: 'assets/robot.png',
+              },
+            });
+          }
+          if (line.custom?.workHoursButtons) {
+            this.messages.push({
+              date: new Date(),
+              type: 'workHoursBtn',
+              reply: false,
+              user: {
+                name: 'Bot',
+                avatar: 'assets/robot.png',
+              },
+            });
+          
+          
+          }
+           
         });
+
+
+
+
         this.scrollDown();
       },
       (err) => {
         this.messages.push({
-          text: 'سامحني صارت مشكلة... كان تنجم تعاود تسأل مرة أخرى',
+          text: 'سامحني صارت مشكلة ... 😓 كان تنجم تعاود تسأل مرة أخرى',
           date: new Date(),
           reply: false,
           user: {
@@ -224,7 +261,7 @@ senderId =''
     this.sendMessage(msgObj);
 
     this.messages = this.messages.filter(
-      (message) => message.type !== 'buttons'
+      (message) => message.type !== 'buttons' && message.type !== 'workHoursBtn'
     );
   }
 

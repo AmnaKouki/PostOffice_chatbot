@@ -6,13 +6,13 @@ rules:
       - intent: goodbye
       - action: utter_goodbye
 
-  - rule: Process CIN
-    steps:
-      - intent: give_cin
-        entities:
-          - cin
-      - action: action_check_cin
-      - action: utter_cin
+  # - rule: Process CIN
+  #   steps:
+  #     - intent: give_cin
+  #       entities:
+  #         - cin
+  #     - action: action_check_cin
+  #     - action: utter_cin
 
   - rule: utter_you're_welcome after intent thanks
     steps:
@@ -33,6 +33,32 @@ rules:
           - package_id
       - action: action_ask_tracking_history
 
+# give working hours details
+  - rule: give working hours for winter
+    steps:
+      - intent: ask_for_poste_office_winter_work_time
+      - action: action_ask_for_winter_working_hours
+
+  - rule: give working hours for summer
+    steps:
+      - intent: ask_for_poste_office_summer_work_time
+      - action: action_ask_for_summer_working_hours
+
+  - rule: let user choose between summer and winter working hours
+    steps:
+      - intent: ask_for_poste_office_work_time
+      - action: action_ask_for_poste_office_work_time
+
+
+
+
+
+
+
+
+
+
+      
   # - rule: check package status
   #   steps:
   #     - intent: check_package_status

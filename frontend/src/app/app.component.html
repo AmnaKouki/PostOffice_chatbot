@@ -34,20 +34,61 @@
         </div>
       </div>
 
+      <!-- table of work hours template -->
+      <div *nbCustomMessage="'workHoursTable'">
+        <p-table [columns]="tableCols" [value]="timeTable" [tableStyle]="{ 'min-width': '10rem' }">
+          <ng-template pTemplate="header" let-columns>
+              <tr>
+                  <th *ngFor="let col of columns">
+                      {{ col.header }}
+                  </th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-rowData let-columns="columns">
+              <tr>
+                  <td *ngFor="let col of columns" style="direction : rtl !important">
+                      {{ rowData[col.field] }}
+                  </td>
+              </tr>
+          </ng-template>
+      </p-table>
+      </div>
+
+
+
+
+
+
       <!--Buttons template -->
       <div *nbCustomMessage="'buttons'" style="margin: -15px 0 0 -15px">
         <button nbButton (click)="forceMessage('خدمات البريد السريع')">
           خدمات البريد 📮
         </button>
         &nbsp;
-        <button nbButton (click)="forceMessage('نحب نبعث فلوس')">
-          نحب نبعث فلوس 💸
+        <button nbButton (click)="forceMessage('أوقات العمل')">
+          أوقات العمل ⏰
         </button>
         &nbsp;
         <button nbButton (click)="forceMessage('نحب نعرف وين الـ Colis متاعي')">
           تتبع الطرود البريدية 📦
         </button>
       </div>
+
+
+            <!--Buttons template for 'working hours' -->
+      <div *nbCustomMessage="'workHoursBtn'" style="margin: -15px 0 0 -15px">
+        <button nbButton (click)="forceMessage('التوقيت الصيفي')">
+          التوقيت الصيفي⛱️
+        </button>
+        &nbsp;
+        <button nbButton (click)="forceMessage('التوقيت الشتوي')">
+          التوقيت الشتوي 🌦️
+        </button>
+
+
+      </div>
+  
+    
 
       <nb-chat-message
         *ngFor="let msg of messages"

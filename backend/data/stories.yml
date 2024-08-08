@@ -36,15 +36,7 @@ stories:
       - action: utter_ask_for_email
       - action: utter_email
 
-  - story: ask for cin number
-    steps:
-      - intent: give_cin
-      - action: utter_ask_for_cin
-      - intent: give_cin
-        entities:
-          - cin: 11234567
-      - action: action_check_cin
-      - action: utter_cin
+
 
   - story: ask for package tracking
     steps:
@@ -55,6 +47,13 @@ stories:
         entities:
           - package_id
       - action: action_ask_tracking_history
+
+
+
+  - story: Two-stage fallback
+    steps:
+      - intent: nlu_fallback
+      - action: action_default_fallback
 
 
   # - story: ask for package status
@@ -88,17 +87,3 @@ stories:
   #       entities:
   #         - package_id
   #     - action: action_check_package_status
-
-  - story: Two-stage fallback
-    steps:
-      - intent: nlu_fallback
-      - action: action_default_fallback
-      # - intent: nlu_fallback
-      # - action: action_utter_ask_rephrase
-
-  # - story: get tracking history with a collapsible
-  #   steps:
-  #     - intent: ask_for_tracking_history
-  #     - action: utter_ask_for_tracking_history
-  #     - action: action_ask_tracking_history
-    

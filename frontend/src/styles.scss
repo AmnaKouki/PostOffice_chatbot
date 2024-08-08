@@ -151,3 +151,32 @@ nb-chat-message-text > p {
 .p-timeline-event-opposite {
   display: none !important;
 }
+
+p-table {
+  direction: rtl !important ;
+  text-align: right !important;
+  margin-right: 1rem !important;
+  right : 0;
+
+  // margin-top: -10pxpx;
+}
+
+.p-datatable .p-datatable-tbody > tr > td  , .p-datatable-tbody > tr > th{
+  text-align: right !important;
+  direction: rtl !important ;
+  text-align: right !important;
+  font-family: "IBM Plex Sans Arabic" !important;
+  right : 0;
+
+}
+.p-datatable .p-datatable-thead > tr > th {
+  direction: rtl !important ;
+  text-align: right !important;
+  text-align: right !important;
+  font-family: "IBM Plex Sans Arabic" !important;
+  right : 0;
+}
+
+body > app-root > nb-layout > div > div > div > div > div > nb-layout-column > nb-chat > div.scrollable > div > nb-chat-message.red.ng-tns-c961600425-5.ng-trigger.ng-trigger-flyInOut.not-reply.ng-star-inserted > div > div > div{
+  margin-top: -30px !important;
+}

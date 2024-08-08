@@ -22,6 +22,9 @@ intents:
   - nlu_fallback
   - out_of_scope
   - ask_for_tracking_history
+  - ask_for_poste_office_work_time
+  - ask_for_poste_office_summer_work_time
+  - ask_for_poste_office_winter_work_time
 
 entities:
   - first_name
@@ -119,6 +122,7 @@ responses:
   utter_ask_for_tracking_history:
     - text: "testing ... <br> text \n is strong "
 
+
 slots:
   first_name:
     type: text
@@ -178,10 +182,12 @@ slots:
         entity: package_id
 
 actions:
-  - action_check_cin
   - action_default_fallback
   - action_utter_ask_rephrase
   - action_ask_tracking_history
+  - action_ask_for_winter_working_hours
+  - action_ask_for_summer_working_hours
+  - action_ask_for_poste_office_work_time
 
 forms: {}
 

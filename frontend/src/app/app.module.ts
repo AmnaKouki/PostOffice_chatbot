@@ -12,6 +12,7 @@ import {
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
+import { TableModule } from 'primeng/table';
 import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from 'primeng/card';
 
@@ -28,7 +29,8 @@ import { CardModule } from 'primeng/card';
     NbButtonModule,
     HttpClientModule,
     TimelineModule,
-    CardModule
+    CardModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
