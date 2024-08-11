@@ -8,6 +8,7 @@ import {
   NbLayoutModule,
   NbThemeModule,
   NbButtonModule,
+  NbListModule,
 } from '@nebular/theme';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -31,6 +32,7 @@ import { CardModule } from 'primeng/card';
     TimelineModule,
     CardModule,
     TableModule,
+    NbListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

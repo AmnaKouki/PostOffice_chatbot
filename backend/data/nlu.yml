@@ -26,6 +26,45 @@ nlu:
       - صباح النور
       - صباح الفل
       - مساء الفل
+      - ahla
+      - ahlan
+      - ahlaa
+      - ahla bik
+      - marhba
+      - marahbe
+      - marahbe bik
+      - marahba
+      - marhba
+      - marhba bik
+      - asslema
+      - 3asslema
+      - 3aslema
+      - 3aslama
+      - 3aslama
+      - salem
+      - salam
+      - salam alikom
+      - salam 3alikom
+      - salam 3alikom wa rahmat allah wa barakatoh
+      - assalem
+      - asselmou alaikom
+      - ahlan bik
+      - salem 5ouya
+      - salem khouya
+      - sbe7 l5ir
+      - sbe7 el khir
+      - sbah el khir
+      - sbeh el khir
+      - yo 
+      - wa sahbi
+      - waa sa7bi
+      - aya 9olna eselem
+      - aya golna essalem
+      - essalem
+      - salem
+
+
+
 
   - intent: goodbye
     examples: |
@@ -36,10 +75,28 @@ nlu:
       - في لامان
       - باي
       - باي باي
-      - اوكي باي
-      - اوكي باي باي
       - انستو
       - تشاو
+      - bye
+      - bye bye
+      - bay
+      - bay bay
+      - ma3a salema
+      - besslema
+      - beslema
+      - bislema
+      - bislama
+      - fi lamen
+      - filamen
+      - filemen
+      - anestou
+      - anesstou
+      - chaou
+      - chaw
+      - tchaw
+    
+
+
 
   - intent: deny
     examples: |
@@ -51,6 +108,14 @@ nlu:
       - لااا
       - موش هك
       - لا أعتقد ذلك
+      - le
+      - la
+      - mouch sa7i7
+      - mouch s7i7
+      - mouch sahih
+      - moch sahi7
+      moch hakeka
+
 
   - intent: affirm
     examples: |
@@ -66,6 +131,15 @@ nlu:
       - أي بالحق
       - بالضبط هكاكة
       - صح
+      - ey
+      - ay
+      - sa7i7
+      - sahih
+      - bedhabt
+      - bedhabt hakka
+      - kelemek s7i7
+
+
 
   - intent: ask_bot_identity
     examples: |
@@ -82,6 +156,28 @@ nlu:
       - شسمك ؟
       - شنوة اسمك ؟
       - شسماك ربي ؟
+      - enta chkoun
+      - inta chkoun
+      - chkoun enta 
+      - chkoun inta
+      - chkounek enta
+      - enta robo 
+      - ye5i enta robo
+      - yekhi enta robo
+      - enta robot
+      - chkoun ya7ki m3aya
+      - chkoun y7ki m3aia
+      - chkoun y7ki maaya
+      - chkoun y7ki m3aya
+      - yekhi enta 3abed
+      - ye5i enta 3abed
+      - hal anta robo
+      - hal anta robot
+      - chesmek
+      - chnowa esmek
+      - 
+
+
 
   - intent: ask_bot_owner
     examples: |
@@ -89,6 +185,12 @@ nlu:
       - شكون إلي برمجك
       - كيفاش تصنعت
       - ياخي فما شكون صنعك
+      - chkoun san3ek
+      - chkoun sanek
+      - chkoun barmjek
+      - chkoun baremjek
+      - kifech tesna3et
+
 
   - intent: ask_for_phone_num
     examples: |
@@ -129,6 +231,15 @@ nlu:
       - كيفاش نتحصل عليكم
       - نحب نكلمكم
       - نحب نتحصل عليكم
+      - kifech netwasel m3akom
+      - kifech netwasel maakom
+      - kifech netwasel bikom
+      - kifech netasel bikom
+      - kifech nettasel bikom
+      - nheb nettassel bikom
+      - nheb netwasel m3akom
+      - nheb nkalemkom
+      - n7eb nkalemkom
 
   - intent: consult_human
     examples: |
@@ -211,6 +322,34 @@ nlu:
       - اش عامل 
       - شنوة اخبارك
       - اشعامل
+      - chnowa a7welek
+      - chnouwa a7welek
+      - chnowa ahwelek
+      - lebes 
+      - labes
+      - labes 3lik
+      - labes alik
+      - cv
+      - ça va
+      - cv lebes 3lik
+      - chnowa jawek
+      - jawek behi
+      - chnowa 7alek
+      - chnowa halek
+      - kifek
+      - kifenk
+      - ech 3amel
+      - ech amel
+      - ech 3amel cv
+      - ech amel cv
+      - chnowa akhbarak
+      - chnouwa akhbarak
+      - chnowa akhbarik
+      - chnouwa akhbarik
+      - chnowa akhbarik
+      - chnowa a5barek
+
+
 
   - intent: transfer_money
     examples: |
@@ -271,23 +410,23 @@ nlu:
       - [Khalledi](last_name) 
       - [Mbarki](last_name)
 
-  - intent: give_cin
-    examples: |
-      - [09947516](cin)
-      - نومرو [11478974](cin)
-      - نومرو بطاقة التعريف هو [11586425](cin)
-      - نومرو بطافة التعريف [02548769](cin)
-      - بطاقة تعريف [11542689](cin)
-      - رقم بطاقة تعريف [11542689](cin)
-      - noumrou [09854239](cin)
-      - bita9et ta3rif [10823131](cin)
-      - bitaket taarif [10822112](cin)
-      - [09954231](cin)
-      - noumrou bita9etta3rif [10815479](cin)
-      - [10832147](cin)
-      - [10225793](cin)
-      - [10432679](cin)
-      - cin [07815469](cin)
+  # - intent: give_cin
+  #   examples: |
+  #     - [09947516](cin)
+  #     - نومرو [11478974](cin)
+  #     - نومرو بطاقة التعريف هو [11586425](cin)
+  #     - نومرو بطافة التعريف [02548769](cin)
+  #     - بطاقة تعريف [11542689](cin)
+  #     - رقم بطاقة تعريف [11542689](cin)
+  #     - noumrou [09854239](cin)
+  #     - bita9et ta3rif [10823131](cin)
+  #     - bitaket taarif [10822112](cin)
+  #     - [09954231](cin)
+  #     - noumrou bita9etta3rif [10815479](cin)
+  #     - [10832147](cin)
+  #     - [10225793](cin)
+  #     - [10432679](cin)
+  #     - cin [07815469](cin)
 
   - intent: email
     examples: |
@@ -354,6 +493,24 @@ nlu:
       - رقم الطرد هو [RR142536123TN](package_id)
       - نومروه هو [RR229864357TN](package_id)
       - نومرو البريد السريع [RR229864357TN](package_id)
+      - noumrou el colis [RR445511227TN](package_id)
+      - noumrou el coli [RR445511227TN](package_id)
+      - noumrou el colis mta3i [RR445511227TN](package_id)
+      - noumrou el coli mta3i [ER445511227DZ](package_id)
+      - numero de colis [ER445511227DZ](package_id)
+      - numero mte3 el colis [ER445511227DZ](package_id)
+      - numero howa [ER445511227DZ](package_id)
+      - numero [ER445511227DZ](package_id)
+      - noumrou el colis mta3i houwa [ER445511227DZ](package_id)
+      - noumrou el coli mta3i houwa [ER445511227DZ](package_id)
+      - ra9mou [ER445511227DZ](package_id)
+      - ra9mou howa [ER445511227DZ](package_id)
+      - ra9m el colis [ER445511227DZ](package_id)
+      - rakmou [ER445511227DZ](package_id)
+      - ra9m el tard [ER445511227DZ](package_id)
+      - rakm el tard [ER445511227DZ](package_id)
+
+
 
   - intent: ask_for_post_location
     examples: |
@@ -388,6 +545,17 @@ nlu:
       - نحب نعرف الطرد متاعي وينو توة
       - نحب نشوف الطرد متاعي
       - نحب نشوف الكولي متاعي
+      - nheb nchouf el colis mte3i win
+      - nheb nchouf el coli mte3i win
+      - nheb nchouf el colis mte3i winou
+      - nheb n3ref el colis mte3i win
+      - nheb n3ref el coli mte3i winou
+      - nheb n3ref el colis mte3i winou
+      - n7eb na3ref el colis mte3i win wsol
+      - n7eb nchouf el coli mte3i win wsol
+      - 9oli el colis mte3i win
+
+
 
 # TODO: deal with this
   # - intent: ask_for_tracking_history
@@ -530,6 +698,62 @@ nlu:
       - wa9tech t7el el poste fel sif
       
 
+  - intent: ask_how_to_send_packages
+    examples: |
+      - كيفية الإرسال عبر البريد السريع
+      - كيف أسرل طرد عبر البريد السريع
+      - كيفية إرسال طرد
+      - كيفاش نبعث طرد 
+      - كيفاش انجم نبعث طرد 
+      - نحب نبعث طرد
+      - نحب نبعث حاجة
+      - نحب نبعث colis
+      - كيفاش نبعث colis
+      - نحب نبعث حاجة لشكون
+      - نحب نبعث كولي لشكون
+      - شنوة الطريقة باش نبعث طرد
+      - شنوة الطريقة باش نبعث colis
+      - كيفاش نبعث حاجة لشكون
+      - عندي قضية نحب نبعثها لشكون
+      - عندي قضية نحب نبعثها
+      - نحب نبعث قضية
+      - نحب نبعث قضية لشكون
+      - نحب نبعث حاجة لشكون
+      - Comment envoyer un colis
+      - envoyer un colis
+      - Comment envoyer un colis à quelqu'un
+      - n7eb nab3ath colis
+      - nheb nab3ath colis
+      - nheb nabath colis
+      - nheb nab3ath 7aja
+      - nheb nabath haja
+      - nheb nab3ath 7aja lechkoun
+      - n7eb nab3ath 7aja
+      - n7eb nab3ath haja
+      - n7eb nab3ath haja lechkoun
+      - n7eb nab3ath package lechkoun
+      - kifech nabath colis
+      - kifech nab3ath colis
+      - chnowa na3mel bech nab3ath colis
+      - chnowa na3mel bech nab3th 7aja
+      - chnowa na3mel bech nab3ath 7aja l7ad
+      - chnowa naamel bech nabaath colis
+      - tari9et ba3then colis
+      - tariket ba3then colis
+      - tariket baathen colis
+
+  - intent: send_package_conditions
+    examples: |
+      - شروط الإيداع
+      - شرط الإيداع
+      - شروط الاداع
+      - شنوة الشروط باش نبعث Colis
+
+
+
+  - intent: send_package_steps
+    examples: |
+      - كيفية الإرسال
 
 
 

@@ -6,13 +6,6 @@ rules:
       - intent: goodbye
       - action: utter_goodbye
 
-  # - rule: Process CIN
-  #   steps:
-  #     - intent: give_cin
-  #       entities:
-  #         - cin
-  #     - action: action_check_cin
-  #     - action: utter_cin
 
   - rule: utter_you're_welcome after intent thanks
     steps:
@@ -49,7 +42,15 @@ rules:
       - intent: ask_for_poste_office_work_time
       - action: action_ask_for_poste_office_work_time
 
+  - rule: give answer options when asked about how to send a package
+    steps:
+      - intent: ask_how_to_send_packages
+      - action: action_ask_how_to_send_packages
 
+  - rule: give the conditions for sending a package
+    steps:
+      - intent: send_package_conditions
+      - action: action_send_package_conditions
 
 
 

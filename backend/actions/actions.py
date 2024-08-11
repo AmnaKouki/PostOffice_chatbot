@@ -162,7 +162,79 @@ class ActionAskForSummerWorkingHours(Action):
         jsonObj= {
             "workHoursButtons": True,
             }
-        dispatcher.utter_message(text=" نظام العمل بالبريد التونسي يتبدل حسب التوقيت الإداري ⌚.\n\n شنوة التوقيت الي تحب تعرفو ؟  ")
+        dispatcher.utter_message(text=" نظام العمل بالبريد التونسي يتبدل حسب التوقيت الإداري 🕒\n\n شنوة التوقيت الي تحب تعرفو ؟  ")
         dispatcher.utter_message(json_message= jsonObj)
         
         return []
+    
+    
+# what to say when asked about steps to send packages
+class ActionAskAskHowToSendPackages(Action):
+
+    def name(self) -> Text:
+        return "action_ask_how_to_send_packages"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        jsonObj= {
+            "HowToSendPackagesBtn": True,
+            }
+        dispatcher.utter_message(text="باش اتنجم تبعث حاجة على البريد السريع, ثما شروط لازم تعرفها قبل:")
+        dispatcher.utter_message(json_message= jsonObj)
+        
+        return []
+    
+
+# answer the button for 'sending package conditions'
+class ActionAskAskHowToSendPackages(Action):
+
+    def name(self) -> Text:
+        return "action_send_package_conditions"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        jsonObj= {
+            "list": True,
+            "options": [
+                "تأكد من تعبئة البيانات الشخصية الخاصة بك بشكل صحيح (خاصة العنوان و رقم الهاتف)",
+                "لازم تستعمل معدات التغليف إلي يقدمها البريد السريع باش تحافظ على سلامة المبعوثات.",
+                "الميزان لازم ما يفوتش الحد الأقصى ( 30 كغ )",
+                "تجنب إرسال البضائع الممنوعة",
+                "القوارير و الأوعية لازم تكون مسكرة بالباهي"
+            ]
+        
+            
+            }
+        dispatcher.utter_message(json_message= jsonObj)
+        
+        return []
+    
+    
+
+class ActionRapidPosteServices(Action):
+
+    def name(self) -> Text:
+        return "action_give_rapid_poste_services"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        jsonObj= {
+            "buttons": True,
+            "options": [
+                        ["تتبع الطرود البريدية 📦","نحب نعرف وين الـ Colis متاعي'"],
+                        ["شروط الإيداع 📋","شنوة الشروط باش نبعث Colis"],
+                        ["  كيفية الإرسال ❓","كيفية الإرسال"],
+                    ]
+        
+            
+            }
+        dispatcher.utter_message(json_message= jsonObj)
+        
+        return []
+    

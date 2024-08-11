@@ -1,8 +1,6 @@
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
 
-
-
 /* ibm-plex-sans-arabic-100 - arabic_latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -147,7 +145,6 @@ nb-chat-message-text > p {
   margin-bottom: 0.5rem !important;
 }
 
-
 .p-timeline-event-opposite {
   display: none !important;
 }
@@ -156,27 +153,54 @@ p-table {
   direction: rtl !important ;
   text-align: right !important;
   margin-right: 1rem !important;
-  right : 0;
+  right: 0;
 
   // margin-top: -10pxpx;
 }
 
-.p-datatable .p-datatable-tbody > tr > td  , .p-datatable-tbody > tr > th{
+.p-datatable .p-datatable-tbody > tr > td,
+.p-datatable-tbody > tr > th {
   text-align: right !important;
   direction: rtl !important ;
   text-align: right !important;
   font-family: "IBM Plex Sans Arabic" !important;
-  right : 0;
-
+  right: 0;
 }
 .p-datatable .p-datatable-thead > tr > th {
   direction: rtl !important ;
   text-align: right !important;
   text-align: right !important;
   font-family: "IBM Plex Sans Arabic" !important;
-  right : 0;
+  right: 0;
 }
 
-body > app-root > nb-layout > div > div > div > div > div > nb-layout-column > nb-chat > div.scrollable > div > nb-chat-message.red.ng-tns-c961600425-5.ng-trigger.ng-trigger-flyInOut.not-reply.ng-star-inserted > div > div > div{
+body
+  > app-root
+  > nb-layout
+  > div
+  > div
+  > div
+  > div
+  > div
+  > nb-layout-column
+  > nb-chat
+  > div.scrollable
+  > div
+  > nb-chat-message.red.ng-tns-c961600425-5.ng-trigger.ng-trigger-flyInOut.not-reply.ng-star-inserted
+  > div
+  > div
+  > div {
   margin-top: -30px !important;
+}
+
+.custom-list {
+  direction: rtl !important ;
+  text-align: right !important;
+  text-align: right !important;
+  font-family: "IBM Plex Sans Arabic" !important;
+  right: 0;
+  background: #36f !important;
+  color: #fff !important;
+  border-bottom-left-radius: 0.25rem !important;
+  border-top-left-radius: 0.25rem !important;
 }

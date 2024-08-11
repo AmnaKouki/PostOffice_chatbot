@@ -15,6 +15,8 @@ export class AppComponent {
   isLoading = false;
   tableCols : any;
   timeTable: any[] = [];
+  list: any;
+  btnList: any ;
   messages: any[] = [
     {
       text: 'أهلا بيك ! أنا صديقك الChatbot 🤖 . إنجم نعاوك في كل شي يخص خدمات البريد التونسي. كان عندك سؤال تفضل 😊',
@@ -194,11 +196,58 @@ export class AppComponent {
                 name: 'Bot',
                 avatar: 'assets/robot.png',
               },
+            });          
+          }
+
+          
+          if (line.custom?.HowToSendPackagesBtn) {
+            this.messages.push({
+              date: new Date(),
+              type: 'HowToSendPackagesBtn',
+              reply: false,
+              user: {
+                name: 'Bot',
+                avatar: 'assets/robot.png',
+              },
             });
           
           
           }
-           
+
+          //  when the response is a list
+          if (line.custom?.list) {
+            this.list= line.custom.options ;
+            this.messages.push({
+              date: new Date(),
+              type: 'list',
+              reply: false,
+              user: {
+                name: 'Bot',
+                avatar: 'assets/robot.png',
+              },
+            });
+        }
+
+        //  when the response is a list of buttons
+        if (line.custom?.buttons) {
+          this.btnList= line.custom.options ;
+          console.log("🚀 ~ AppComponent ~ data.forEach ~ btnList:", this.btnList)
+          
+          this.messages.push({
+            date: new Date(),
+            type: 'buttonsTemplate',
+            reply: false,
+            user: {
+              name: 'Bot',
+              avatar: 'assets/robot.png',
+            },
+          });
+        
+        
+        }
+
+
+
         });
 
 

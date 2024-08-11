@@ -12,7 +12,6 @@ intents:
   - ask_for_phone_num
   - ask_for_email
   - consult_human
-  - give_cin
   - ask_for_cin
   - ask_how_are_you
   - give_package_id
@@ -25,6 +24,9 @@ intents:
   - ask_for_poste_office_work_time
   - ask_for_poste_office_summer_work_time
   - ask_for_poste_office_winter_work_time
+  - ask_how_to_send_packages
+  - send_package_conditions
+  - send_package_steps
 
 entities:
   - first_name
@@ -108,10 +110,10 @@ responses:
     - text: "إتنجم تعطينا رقم البريد السريع الخاص بالطرد متاعك ؟ 📦📬"
 
   utter_welcome_to_rapid_poste:
-    - text: "أهلا بيك في خدمات البريد السريع 📫📩."
+    - text: "أهلا بيك في خدمات البريد السريع 📫📩 \n\n هي خدمة شحن ممتازة تضمن لك توصيل سريع و موثوق داخل تونس والا حتى خارج تونس. \n\n شنوة تحب تعرف بالضبط ؟"
 
   utter_ask_for_rapid_poste_service:
-    - text: "هي خدمة شحن ممتازة تضمن لك توصيل سريع و موثوق داخل تونس والا حتى خارج تونس"
+    - text: "هي خدمة شحن ممتازة تضمن لك توصيل سريع و موثوق داخل تونس والا حتى خارج تونس. \n\n شنوة تحب تعرف بالضبط ؟"
 
   utter_default:
     - text: "سامحني ما فهمتكش 😓. تنجم تعاود تفسرلي ؟"
@@ -188,6 +190,9 @@ actions:
   - action_ask_for_winter_working_hours
   - action_ask_for_summer_working_hours
   - action_ask_for_poste_office_work_time
+  - action_ask_how_to_send_packages
+  - action_send_package_conditions
+  - action_give_rapid_poste_services
 
 forms: {}
 
