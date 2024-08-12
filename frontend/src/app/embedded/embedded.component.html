@@ -1,0 +1,168 @@
+<nb-layout class="custom"
+  ><nb-layout-column class="custom">
+    <nb-chat [@.disabled]="true">
+      <ng-template nbChatTitle>
+        <div style="text-align: center">🤖 البريد التونسي Chatbot</div>
+      </ng-template>
+      <!-- Loading template -->
+      <div *nbCustomMessage="'loading'">
+        <img
+          src="assets/bubble.gif"
+          style="width: 50px; margin: -15px 0 0 -15px"
+          alt=""
+        />
+      </div>
+
+      <!-- stepper template -->
+      <div *nbCustomMessage="'steps'">
+        <div class="card" style="color: #000000; margin: -15px 0 0 -15px">
+          <p-timeline [value]="items" class="w-full">
+            <ng-template pTemplate="marker" let-event>
+              <span class="custom-marker shadow-2">✔️</span>
+            </ng-template>
+
+            <ng-template pTemplate="content" let-event>
+              <span class="stepper-title"
+                >{{ event.location }} - {{ event.country }}</span
+              >
+              <span class="stepper-date">{{ event.date }}</span>
+              <span class="stepper-content">
+                {{ event.eventType }} {{ event.info }}</span
+              >
+            </ng-template>
+          </p-timeline>
+        </div>
+      </div>
+
+      <!-- table of work hours template -->
+      <div *nbCustomMessage="'workHoursTable'">
+        <div style="margin: -15px 0 0 -15px">
+          <p-table
+            [columns]="tableCols"
+            [value]="timeTable"
+            [tableStyle]="{ 'min-width': '10rem', 'border-radius': '100%' }"
+          >
+            <ng-template pTemplate="header" let-columns>
+              <tr>
+                <th *ngFor="let col of columns">
+                  {{ col.header }}
+                </th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rowData let-columns="columns">
+              <tr>
+                <td
+                  *ngFor="let col of columns"
+                  style="direction: rtl !important"
+                >
+                  {{ rowData[col.field] }}
+                </td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
+      </div>
+
+      <!--Buttons template -->
+      <div *nbCustomMessage="'buttons'" style="margin: -15px 0 0 -15px">
+        <button nbButton (click)="forceMessage('خدمات البريد')">
+          خدمات البريد 📮
+        </button>
+        &nbsp;
+        <button nbButton (click)="forceMessage('أوقات العمل')">
+          أوقات العمل ⏰
+        </button>
+        &nbsp;
+        <button nbButton (click)="forceMessage('نحب نعرف وين الـ Colis متاعي')">
+          تتبع الطرود البريدية 📦
+        </button>
+      </div>
+
+      <!--Buttons template for 'working hours' -->
+      <div *nbCustomMessage="'workHoursBtn'" style="margin: -15px 0 0 -15px">
+        <button nbButton (click)="forceMessage('التوقيت الصيفي')">
+          التوقيت الصيفي⛱️
+        </button>
+        &nbsp;
+        <button nbButton (click)="forceMessage('التوقيت الشتوي')">
+          التوقيت الشتوي 🌦️
+        </button>
+      </div>
+
+      <!--Buttons template for 'How to send a package' -->
+      <!--Buttons template -->
+      <div
+        *nbCustomMessage="'HowToSendPackagesBtn'"
+        style="
+          border-bottom-left-radius: 0.25rem !important;
+          border-top-left-radius: 0.25rem !important;
+          margin: 0 10px !important;
+        "
+      >
+        <button nbButton (click)="forceMessage('شروط الإيداع')">
+          شروط الإيداع 📋
+        </button>
+        &nbsp;
+        <button nbButton (click)="forceMessage('كيفية الإرسال')">
+          كيفية الإرسال ❓
+        </button>
+        &nbsp;
+      </div>
+
+      <div *nbCustomMessage="'buttonsTemplate'">
+        <button
+          *ngFor="let btn of btnList"
+          nbButton
+          (click)="forceMessage(btn[1])"
+          style="margin: 5px 10px"
+        >
+          {{ btn[0] }}
+        </button>
+        &nbsp;
+      </div>
+
+      <!--List template -->
+      <!-- TODO: Correct the css -->
+      <div *nbCustomMessage="'list'" style="margin: -15px 0 0 -15px">
+        <span class="custom-list">
+          <p *ngFor="let item of list">✔️ {{ item }}</p>
+        </span>
+      </div>
+
+      <!--accordion template -->
+      <div *nbCustomMessage="'accordion'" style="direction: rtl !important">
+        <p-accordion>
+          <p-accordionTab [header]="step.step" *ngFor="let step of steps">
+            <p class="m-0">
+              {{ step.description }}
+            </p>
+          </p-accordionTab>
+        </p-accordion>
+      </div>
+
+      <nb-chat-message
+        *ngFor="let msg of messages"
+        [type]="msg.type"
+        [message]="msg.text"
+        [reply]="msg.reply"
+        [files]="msg.files"
+        [quote]="msg.quote"
+        [latitude]="msg.latitude"
+        [longitude]="msg.longitude"
+        [avatar]="msg.user.avatar"
+        class="red"
+      >
+      </nb-chat-message>
+
+      <nb-chat-form
+        [ngClass]="{
+        'rtl': isUserMessageArabic === 'rtl',
+        'ltr': isUserMessageArabic === 'ltr',
+        }"
+        (send)="sendMessage($event)"
+        (onInputChange)="handleInputChange($event)"
+        messagePlaceholder="إسئلني ..."
+      >
+      </nb-chat-form>
+    </nb-chat> </nb-layout-column
+></nb-layout>

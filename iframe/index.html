@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poste Tunisienne - Exemple Chatbot Iframe</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        margin-top: 30px;
+      }
+      h1 {
+        color: #333;
+
+        margin: 0;
+      }
+      p {
+        margin: 10px;
+      }
+      pre {
+        padding: 10px;
+        margin: 10px;
+      }
+      code {
+        font-size: 1.2em;
+        background: #c8c8c8;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Poste Tunisienne - Exemple Chatbot Iframe</h1>
+    <p>
+      Cet exemple montre comment intégrer le chatbot dans une page web en
+      utilisant le script "chatbot.js"
+    </p>
+    <p>
+      Pour intégrer le chatbot dans votre page web, ajoutez le script suivant
+      dans le body de votre page:
+    </p>
+    <pre>
+        <code>&lt;script src="chatbot.js" chatbot-url="http://localhost:8000"&gt;&lt;/script&gt;</code>
+    </pre>
+    <p>
+      Remplacez <strong>"http://localhost:8000"</strong> par l'URL de votre
+      serveur chatbot
+    </p>
+
+    <!-- Add this line -->
+    <script src="chatbot.js" chatbot-url="http://localhost:4200"></script>
+    <!-- Add this line -->
+  </body>
+</html>

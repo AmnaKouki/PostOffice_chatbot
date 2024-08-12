@@ -38,11 +38,11 @@ stories:
 
 
 
-  # - story: ask for package tracking
-  #   steps:
-  #     - intent: ask_for_package_tracking
-  #     - action: utter_check_package_status
-  #     - action: utter_ask_for_rapid_poste_number
+  - story: ask for package tracking
+    steps:
+      - intent: ask_for_package_tracking
+      - action: utter_check_package_status
+      - action: utter_ask_for_rapid_poste_number
   #     - intent: give_package_id
   #       entities:
   #         - package_id
@@ -51,7 +51,6 @@ stories:
   - story: give the rapid poste services
     steps:
       - intent: ask_for_rapid_poste_service
-      - action: utter_welcome_to_rapid_poste
       - action: action_give_rapid_poste_services
 
 

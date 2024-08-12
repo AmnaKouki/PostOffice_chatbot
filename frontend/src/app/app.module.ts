@@ -16,10 +16,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { TableModule } from 'primeng/table';
 import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from 'primeng/card';
-
-
+import { AccordionModule } from 'primeng/accordion';
+import { EmbeddedComponent } from './embedded/embedded.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, EmbeddedComponent, ChatbotComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,6 +34,7 @@ import { CardModule } from 'primeng/card';
     CardModule,
     TableModule,
     NbListModule,
+    AccordionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

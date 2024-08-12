@@ -174,25 +174,6 @@ p-table {
   right: 0;
 }
 
-body
-  > app-root
-  > nb-layout
-  > div
-  > div
-  > div
-  > div
-  > div
-  > nb-layout-column
-  > nb-chat
-  > div.scrollable
-  > div
-  > nb-chat-message.red.ng-tns-c961600425-5.ng-trigger.ng-trigger-flyInOut.not-reply.ng-star-inserted
-  > div
-  > div
-  > div {
-  margin-top: -30px !important;
-}
-
 .custom-list {
   direction: rtl !important ;
   text-align: right !important;
@@ -203,4 +184,51 @@ body
   color: #fff !important;
   border-bottom-left-radius: 0.25rem !important;
   border-top-left-radius: 0.25rem !important;
+}
+
+p-accordion-header
+  p-accordion-content
+  p-accordion
+  p-accordionTab
+  p-accordion-header-text {
+  font-family: "IBM Plex Sans Arabic" !important;
+  direction: rtl !important ;
+  text-align: right !important;
+  color: #222b45 !important;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background-color: #36f !important;
+  color: #fff !important;
+}
+
+.p-datatable .p-datatable-tbody > tr {
+  background-color: #36f !important;
+  color: #fff !important;
+}
+
+.nb-theme-default .nb-custom-message-not-reply a,
+.nb-theme-default .nb-custom-message-not-reply a:hover,
+.nb-theme-default .nb-custom-message-not-reply a:focus {
+  direction: rtl !important ;
+  text-align: right !important;
+  text-align: right !important;
+  font-family: "IBM Plex Sans Arabic" !important;
+  color: #000 !important;
+  text-decoration: none !important;
+}
+
+p-accordion-content > * {
+  direction: rtl !important ;
+  text-align: right !important;
+  font-family: "IBM Plex Sans Arabic" !important;
+}
+
+p {
+  text-align: right !important;
+}
+
+
+.nb-theme-default [nbButton].appearance-filled.size-medium, .nb-theme-default .appearance-filled.size-medium[nbButtonToggle] {
+  margin: 3px !important
 }
