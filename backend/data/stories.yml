@@ -37,16 +37,17 @@ stories:
       - action: utter_email
 
 
-
   - story: ask for package tracking
     steps:
       - intent: ask_for_package_tracking
       - action: utter_check_package_status
       - action: utter_ask_for_rapid_poste_number
-  #     - intent: give_package_id
-  #       entities:
-  #         - package_id
-  #     - action: action_ask_tracking_history
+      - intent: give_package_id
+        entities:
+          - package_id
+      - action: action_ask_tracking_history
+
+
 
   - story: give the rapid poste services
     steps:
@@ -59,35 +60,3 @@ stories:
       - intent: nlu_fallback
       - action: action_default_fallback
 
-
-  # - story: ask for package status
-  #   steps:
-  #     - intent: ask_for_package_tracking
-  #     - action: utter_check_package_status
-  #     # - action: utter_rapid_pote_number
-  #     - action: utter_ask_for_rapid_poste_number
-  #     - intent: give_package_id
-  #       entities:
-  #         - package_id
-  #     - action: action_check_package_status
-
-  ## intro to rapid poste services:
-  # - story: ask about the rapid poste service
-  #   steps:
-  #   - intent: ask_for_rapid_poste_service
-  #   - action: utter_welcome_to_rapid_poste
-  #   - action: utter_ask_for_rapid_poste_service
-
-  # - story: track package location
-  #   steps:
-  #     - intent: ask_for_rapid_poste_service
-  #     - action: utter_welcome_to_rapid_poste
-  #     - action: utter_ask_for_rapid_poste_service
-  #     - intent: ask_for_package_tracking
-  #     - action: utter_check_package_status
-  #     # - action: utter_rapid_pote_number
-  #     - action: utter_ask_for_rapid_poste_number
-  #     - intent: give_package_id
-  #       entities:
-  #         - package_id
-  #     - action: action_check_package_status
