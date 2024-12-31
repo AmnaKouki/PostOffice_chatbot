@@ -36,6 +36,7 @@ class DataFetcher:
                     self.listSuivi.append(s)
                 return self.listSuivi
             else:
+                print("Error while getting data.")
                 return None
         else:
             print("Error while getting data. Can't access the page.")
@@ -49,6 +50,3 @@ class DataFetcher:
 # for row in data :
 #     print(row.date + " - " + row.country + " - "+ row.location + " - "+ row.eventType + " - "+ row.info)
 #     print("----")
-
-
-
