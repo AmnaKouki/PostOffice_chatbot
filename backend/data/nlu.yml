@@ -255,29 +255,11 @@ nlu:
       - nheb nahki maa agent
       - n7eb na7ki m3a agent
       - n7eb na7ki m3a 3abed
+      - 7achti b ensen
+      - n7eb ne7ki m3a ensen
+      - man7ebech ne7ki m3a robot
 
-  - intent: check_my_balance
-    examples: |
-      - قداش عندي فلوس في الكونط
-      - قداه عندي فلوس في الكونط
-      - قداش عندي في الكونط
-      - قداه عندي في الكونط
-      - نحب نعرف قداش عندي فلوس 
-      - نحب نعرف قداش عندي في الكونط
-      - نحب نعرف قداش عندي فلوس في الكونط
-      - قلي قداه عندي في الكونط
-      - قلي قداش عندي في الكونط
-      -  قداه الصولد متاعي
-      -  قداش الصولد متاعي
-      - أعطيني الصولد متاعي
-      - قلي قداش عندي صولد
-      - قداش فما فلوس في الكونط
-      - قداش فما في الكونط
-      - قداه عندي في الصولد
-      - قداش عندي فلوس 
-      - قداه عندي فلوس
-      - نحب نشوف فلوسي 
-      - نحب نشوف الصولد
+
 
   - intent: thanking
     examples: |
@@ -291,6 +273,12 @@ nlu:
       - ya3tik essa7a
       - yaatik saha
       - ya3tik sa7a
+      - ok
+      - 3aychou bot
+      - wadha7
+      - wadhah
+      - behi
+      - aya behi
       - شكرا
       - مرسي
       - مشكور
@@ -306,6 +294,8 @@ nlu:
       - عيشو الروبو
       - مشكور صاحبي
       - زايد معاك
+      - باهي
+      - واضح
 
   - intent: ask_how_are_you
     examples: |
@@ -351,135 +341,16 @@ nlu:
 
 
 
-  - intent: transfer_money
-    examples: |
-      - نحب نحول فلوس
-      - نحب نحول فلوس لشخص
-      - نحب نحول فلوس لصاحبي
-      - نحب نحول فلوس لصديقي
-      - نحب نبعث فلوس
-      - نحب نبعث فلوس لشكون
-      - كيفاش نبعث فلوس لشكون
-      - ابعث فلوس
-      - نحب نبعث فلوس
-      - كيفاش نبعث فلوس
-      - انجم نبعث فلوس ؟
-      - ابعث فلوس لشكون
-      - ابعث الفلوس لحد
-      - نحب نبعث فلوس لحد
-      - nheb nab3eth flous
-      - n7eb nabeath flous 
-      - n7eb na3ml transaction
-      - ab3eth flous
-      - ab3eth money
-      - ennajem nabe3th flous ?
-      - ab3eth flous l chkoun
 
-  - intent: Name
-    examples: |
-      - اسمي [ايمن](first_name)
-      - انا إسمي [مروى](first_name)
-      - انا [محمد](first_name)
-      - [محمد](first_name)
-      - [Dorra](first_name)
-      - [Ines](first_name)
-      - [Abderrahmen](first_name)
-      - esmi [Hedy](first_name)
-      - [Nour](first_name)
-      - [Amine](first_name)
-      - ena : [Amen](first_name)
-      - 2esmi [Ramzi](first_name)
 
-  - intent: last_Name
-    examples: |
-      - اللقب [تونسي](last_name)
-      - لقبي هو [فضلاوي](last_name)
-      - لقبي [فضلاوي](last_name)
-      - [Trabelsi](last_name)
-      - [Channoufi](last_name)
-      - [Ben Arous](last_name)
-      - [Boukeri](last_name)
-      - ela9ab mte3i [Ben ABid](last_name)
-      - [Ben Jmiaa](last_name)
-      - [Kahleoui](last_name)
-      - la9ab [Amamou](last_name)
-      - la9abi [Amamou](last_name)
-      - [Kanzari](last_name)
-      - [Dhieb](last_name) 
-      - [Souei](last_name)
-      - [Khalledi](last_name) 
-      - [Mbarki](last_name)
 
-  # - intent: give_cin
-  #   examples: |
-  #     - [09947516](cin)
-  #     - نومرو [11478974](cin)
-  #     - نومرو بطاقة التعريف هو [11586425](cin)
-  #     - نومرو بطافة التعريف [02548769](cin)
-  #     - بطاقة تعريف [11542689](cin)
-  #     - رقم بطاقة تعريف [11542689](cin)
-  #     - noumrou [09854239](cin)
-  #     - bita9et ta3rif [10823131](cin)
-  #     - bitaket taarif [10822112](cin)
-  #     - [09954231](cin)
-  #     - noumrou bita9etta3rif [10815479](cin)
-  #     - [10832147](cin)
-  #     - [10225793](cin)
-  #     - [10432679](cin)
-  #     - cin [07815469](cin)
-
-  - intent: email
-    examples: |
-      - [dorratrabelsi8@gmail.com](mail)
-      - المايل متاعي [sonia2011@gmail.com](mail)
-      - المايل هو [houda83@gmail.com](mail)
-      - email mte3i [medezzine@gmail.com](mail)
-      - email  te3i [nouri@yahoo.fr](mail)
-      - [naaimzarrouki@hotmail.com](mail)
-      - [mrbedis@outlook.com](mail)
-      - email howa [razimemi8@gmail.com](mail)
-      - [helmiabsi3@yahoo.com](mail)
-      - [medhedi.ezzine@esprit.tn](mail)
-      - [mohamedaziz.selmi@esprit.tn](mail)
-      - [heniamamou789@gmail.com](mail)
-      - [atayari494@yahoo.com](mail)
-
-  - intent: birthdate
-    examples: |
-      - [1973-05-10](birth_date)
-      - مولود في [1983-05-10](birth_date)
-      - تولدت في [1973-05-10](birth_date)
-      - عيد ميلادي هو [2001-05-10](birth_date)
-      - عيد ميلادي في [2000-05-10](birth_date)
-      - تولدت نهار [2004-11-10](birth_date)
-      - تاريخ الميلاد [1982-04-23](birth_date)
-      - تاريخ الميلاد هو [1996-12-10](birth_date)
-      - mawloud fi [1997-08-22](birth_date)
-      - date de naissance [1989-06-14](birth_date)
-      - [1997-6-13](birth_date)
-      - [1977-6-03](birth_date)
-      - [1952-11-25](birth_date)
-
-  - intent: phone_number
-    examples: |
-      - [54312678](phone_number)
-      - نومرو تاليفوني [20014895](phone_number)
-      - تاليفوني [27845692](phone_number)
-      - رقمي هو [40256789](phone_number)
-      - هاو نومرويا [97643125](phone_number)
-      - هاو نومرو تاليفوني [92458756](phone_number)
-      - نومرويا [54312678](phone_number)
-      - noumrouya [27816709](phone_number)
-      - talifouni [98331662](phone_number)
-      - [20052651](phone_number)
-      - [93124759](phone_number)
-      - mnoumrou taliphouni [42137894](phone_number)
-      - noumrou [94602316](phone_number)
-      - [95889949](phone_number)
 
   - intent: give_package_id
     examples: |
       - [EE123456789TN](package_id)
+      - [EJ578598705EG](package_id)
+      - [EA023038505TN](package_id)
+      - [EA019503015TN](package_id)
       - نومرو الطرد متاعي هو [RR142536123TN](package_id)
       - الطرد متاعي هو [EE998855661TN](package_id)
       - النومرو متاعو [RR445511227TN](package_id)
@@ -512,22 +383,35 @@ nlu:
 
 
 
-  - intent: ask_for_post_location
-    examples: |
-      - نحب نعرف وينو مكتب البريد
-      - نحب نعرف وين مكتب البريد 
-      - نحب نعرف وينو مكتب البريد  في تونس
+
 
   - intent: ask_for_rapid_poste_service
     examples: |
       - البريد السريع
       - خدمة البريد السريع
       - خدمات البريد
+      - البريد
       - خدمات البريد السريع
       - rapid poste
       - خدمة البريد السريع في تونس
       - خدمة البريد السريع في العاصمة
       - خدمة البريد السريع في العاصمة تونس
+      - خدمات البريد
+      - services
+      - rapid poste service
+      - services de rapid poste
+      - chnowa 5adamet el berid
+      - 5ademet
+      - 5adamet el berid
+      - 5adamet el berid el sari3
+      - 5edmet el berid
+      - chnowa les services ta3 el poste
+      - les services ta3 el poste
+      - rapid poste service
+      - chnowa les services ta3 el poste
+      - chnowa les services ta3 el bousta
+      - chnowa t9adamli el bousta
+      - 
 
   - intent: ask_for_package_tracking
     examples: |
@@ -558,16 +442,6 @@ nlu:
       - n7eb na3ref el colis mte3i win wsol
       - n7eb nchouf el coli mte3i win wsol
       - 9oli el colis mte3i win
-
-
-
-# TODO: deal with this
-  # - intent: ask_for_tracking_history
-  #   examples: |
-  #     - historique
-  #     - tracking
-  #     - track
-
 
 
 
@@ -610,6 +484,11 @@ nlu:
       - chnia aw9at el 3amal
       - chnia aw9at el 3amal mte3 el bousta
       - awkat el 3amal
+      - aw9at el 3amal
+      - tawkit
+      - taw9it el 3amal
+      - tawkit el amal
+
 
 
   - intent: ask_for_poste_office_winter_work_time
@@ -639,6 +518,9 @@ nlu:
       - التوقيت الشتوي
       - التوقيت الشتوي متاع البوسطة
       - شنوا وقت الخدمة في الشتاء
+      - أوقات العمل في الشتاء
+      - توقيت العمل الشتووي
+      - العمل في فصل الشتاء
       - horaire d'hiver
       - horaire de travail en hiver
       - horaire de travail en hiver de la poste
@@ -654,6 +536,11 @@ nlu:
       - wakteh thel el bousta fel chta
       - kifech wa9t el 5edma fel chte
       - kifeh wa9t el khedma fel chte
+      - taw9it chetwi
+      - el taw9it el chetwi
+      - taw9it el 5edma el chetwi
+      - taw9it el chté
+      - tawkit el chetwi
 
 
   - intent: ask_for_poste_office_summer_work_time
@@ -680,6 +567,11 @@ nlu:
       - شنوا اةقات العمل في الصيف
       - وقتاش تخدمو في الصيف
       - شنوا التوقيت الصيفي 
+      - التوقيت الصيفي
+      - توقيت صيفي
+      - وقت العمل في الصيف
+      - اوقات العمل في الصبف
+      - العمل في فصل الصيف
       - taw9it el sif
       - horaire de travail en été
       - horaire d'été
@@ -700,7 +592,10 @@ nlu:
       - wa9tech t7ellou fel sif
       - chnowa awkat el khedma fel siff
       - wa9tech t7el el poste fel sif
-      
+      - taw9it saifi
+      - etaw9it essaifi
+      - aw9at l3amal fe sif
+      - wa9tech te5dmou fessif
 
   - intent: ask_how_to_send_packages
     examples: |
@@ -771,26 +666,6 @@ nlu:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# TODO: verify if synonyms works (guess it does not work)
-
   - synonym: package
     examples: |
       - package
@@ -813,6 +688,168 @@ nlu:
       - نومرو
       - رقم
       - number
+
+## -------------------------------------
+## In case needed for new features
+## -------------------------------------
+
+  - intent: check_my_balance
+    examples: |
+      - قداش عندي فلوس في الكونط
+      - قداه عندي فلوس في الكونط
+      - قداش عندي في الكونط
+      - قداه عندي في الكونط
+      - نحب نعرف قداش عندي فلوس 
+      - نحب نعرف قداش عندي في الكونط
+      - نحب نعرف قداش عندي فلوس في الكونط
+      - قلي قداه عندي في الكونط
+      - قلي قداش عندي في الكونط
+      -  قداه الصولد متاعي
+      -  قداش الصولد متاعي
+      - أعطيني الصولد متاعي
+      - قلي قداش عندي صولد
+      - قداش فما فلوس في الكونط
+      - قداش فما في الكونط
+      - قداه عندي في الصولد
+      - قداش عندي فلوس 
+      - قداه عندي فلوس
+      - نحب نشوف فلوسي 
+      - نحب نشوف الصولد
+
+  - intent: transfer_money
+    examples: |
+      - نحب نحول فلوس
+      - نحب نحول فلوس لشخص
+      - نحب نحول فلوس لصاحبي
+      - نحب نحول فلوس لصديقي
+      - نحب نبعث فلوس
+      - نحب نبعث فلوس لشكون
+      - كيفاش نبعث فلوس لشكون
+      - ابعث فلوس
+      - نحب نبعث فلوس
+      - كيفاش نبعث فلوس
+      - انجم نبعث فلوس ؟
+      - ابعث فلوس لشكون
+      - ابعث الفلوس لحد
+      - نحب نبعث فلوس لحد
+      - nheb nab3eth flous
+      - n7eb nabeath flous 
+      - n7eb na3ml transaction
+      - ab3eth flous
+      - ab3eth money
+      - ennajem nabe3th flous ?
+      - ab3eth flous l chkoun
+
+  # - intent: give_cin
+  #   examples: |
+  #     - [09947516](cin)
+  #     - نومرو [11478974](cin)
+  #     - نومرو بطاقة التعريف هو [11586425](cin)
+  #     - نومرو بطافة التعريف [02548769](cin)
+  #     - بطاقة تعريف [11542689](cin)
+  #     - رقم بطاقة تعريف [11542689](cin)
+  #     - noumrou [09854239](cin)
+  #     - bita9et ta3rif [10823131](cin)
+  #     - bitaket taarif [10822112](cin)
+  #     - [09954231](cin)
+  #     - noumrou bita9etta3rif [10815479](cin)
+  #     - [10832147](cin)
+  #     - [10225793](cin)
+  #     - [10432679](cin)
+  #     - cin [07815469](cin)
+
+  - intent: Name
+    examples: |
+      - اسمي [ايمن](first_name)
+      - انا إسمي [مروى](first_name)
+      - انا [محمد](first_name)
+      - [محمد](first_name)
+      - [Dorra](first_name)
+      - [Ines](first_name)
+      - [Abderrahmen](first_name)
+      - esmi [Hedy](first_name)
+      - [Nour](first_name)
+      - [Amine](first_name)
+      - ena : [Amen](first_name)
+      - 2esmi [Ramzi](first_name)
+
+  - intent: last_Name
+    examples: |
+      - اللقب [تونسي](last_name)
+      - لقبي هو [فضلاوي](last_name)
+      - لقبي [فضلاوي](last_name)
+      - [Trabelsi](last_name)
+      - [Channoufi](last_name)
+      - [Ben Arous](last_name)
+      - [Boukeri](last_name)
+      - ela9ab mte3i [Ben ABid](last_name)
+      - [Ben Jmiaa](last_name)
+      - [Kahleoui](last_name)
+      - la9ab [Amamou](last_name)
+      - la9abi [Amamou](last_name)
+      - [Kanzari](last_name)
+      - [Dhieb](last_name) 
+      - [Souei](last_name)
+      - [Khalledi](last_name) 
+      - [Mbarki](last_name)
+
+
+  - intent: email
+    examples: |
+      - [dorratrabelsi8@gmail.com](mail)
+      - المايل متاعي [sonia2011@gmail.com](mail)
+      - المايل هو [houda83@gmail.com](mail)
+      - email mte3i [medezzine@gmail.com](mail)
+      - email  te3i [nouri@yahoo.fr](mail)
+      - [naaimzarrouki@hotmail.com](mail)
+      - [mrbedis@outlook.com](mail)
+      - email howa [razimemi8@gmail.com](mail)
+      - [helmiabsi3@yahoo.com](mail)
+      - [medhedi.ezzine@esprit.tn](mail)
+      - [mohamedaziz.selmi@esprit.tn](mail)
+      - [heniamamou789@gmail.com](mail)
+      - [atayari494@yahoo.com](mail)
+
+  - intent: birthdate
+    examples: |
+      - [1973-05-10](birth_date)
+      - مولود في [1983-05-10](birth_date)
+      - تولدت في [1973-05-10](birth_date)
+      - عيد ميلادي هو [2001-05-10](birth_date)
+      - عيد ميلادي في [2000-05-10](birth_date)
+      - تولدت نهار [2004-11-10](birth_date)
+      - تاريخ الميلاد [1982-04-23](birth_date)
+      - تاريخ الميلاد هو [1996-12-10](birth_date)
+      - mawloud fi [1997-08-22](birth_date)
+      - date de naissance [1989-06-14](birth_date)
+      - [1997-6-13](birth_date)
+      - [1977-6-03](birth_date)
+      - [1952-11-25](birth_date)
+
+  - intent: phone_number
+    examples: |
+      - [54312678](phone_number)
+      - نومرو تاليفوني [20014895](phone_number)
+      - تاليفوني [27845692](phone_number)
+      - رقمي هو [40256789](phone_number)
+      - هاو نومرويا [97643125](phone_number)
+      - هاو نومرو تاليفوني [92458756](phone_number)
+      - نومرويا [54312678](phone_number)
+      - noumrouya [27816709](phone_number)
+      - talifouni [98331662](phone_number)
+      - [20052651](phone_number)
+      - [93124759](phone_number)
+      - mnoumrou taliphouni [42137894](phone_number)
+      - noumrou [94602316](phone_number)
+      - [95889949](phone_number)
+
+  - intent: ask_for_post_location
+    examples: |
+      - نحب نعرف وينو مكتب البريد
+      - نحب نعرف وين مكتب البريد 
+      - نحب نعرف وينو مكتب البريد  في تونس
+
+
 
   - lookup: mail
     examples: |
@@ -1491,3 +1528,4 @@ nlu:
       - 50702821
       - 51760551
       - 52235841
+
